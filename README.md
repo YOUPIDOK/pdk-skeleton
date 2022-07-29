@@ -7,6 +7,8 @@
 ### Dependencies
 * Symfony 6.1
 * Easy admin 4.3
+* Boostrap 5.2
+* Font awesome 6.1
 
 ### Install
 ```shell
