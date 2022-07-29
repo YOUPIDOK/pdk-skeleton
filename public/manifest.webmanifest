@@ -1,0 +1,15 @@
+{
+  "id": "/",
+  "name": "App name",
+  "short_name": "Short app name",
+  "start_url": "https://app.domain.fr",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "App description",
+  "icons": [
+    {
+      "src": "pwa/icon_200px.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
