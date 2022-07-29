@@ -5,10 +5,11 @@
 * PHP 8.1
 * Node 16
 ### Dependencies
-* Symfony 6.1
-* Easy admin 4.3
-* Boostrap 5.2
-* Font awesome 6.1
+* Symfony ``6.1``
+* Easy admin ``4.3``
+* Boostrap ``5.2``
+* Font awesome ``6.1``
+* Liip Imagine ``2.8``
 
 ### Install
 ```shell
