@@ -5,8 +5,7 @@ import '@fortawesome/fontawesome-free/js/regular'
 
 // Css
 import './styles/app.scss';
-import 'bootstrap/scss/bootstrap.scss'
-import 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.min';
 
 // Start stimulus
 import './bootstrap';
