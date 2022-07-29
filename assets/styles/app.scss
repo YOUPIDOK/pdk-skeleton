@@ -1,10 +1,11 @@
+@import "../fonts/_imports";
 @import "variables/_imports";
 @import "components/_imports";
 @import "partials/_imports";
 @import "pages/_imports";
 
 /* Libs */
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/scss/bootstrap";
 
 body {
   //font-family : "roboto", sans-serif;
