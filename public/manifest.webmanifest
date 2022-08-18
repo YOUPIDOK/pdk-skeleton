@@ -8,7 +8,7 @@
   "description": "App description",
   "icons": [
     {
-      "src": "pwa/icon_200px.png",
+      "src": "app_icon/icon_200px.png",
       "sizes": "200x200",
       "type": "image/png"
     }

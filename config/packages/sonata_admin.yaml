@@ -1,0 +1,31 @@
+sonata_admin:
+    title: 'Administration'
+    title_logo: '/app_icon/icon_100px.png'
+
+    security:
+        role_admin: ROLE_ADMIN
+
+    dashboard:
+        groups:
+#            group:
+#                label: Utilisateurs
+#                icon: '<i class="fa fa-user"></i>'
+#                items:
+#                    - admin.user
+
+    assets:
+        extra_javascripts:
+#            - exemple.js
+
+        extra_stylesheets:
+#            - exemple.css
+
+#    templates:
+#        user_block: 'user_block.html.twig'
+
+    breadcrumbs:
+        child_admin_route: edit
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]

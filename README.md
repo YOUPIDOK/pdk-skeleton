@@ -6,12 +6,13 @@
 * Node ``16``
 ### Dependencies
 * Symfony ``6.1``
-* Easy admin ``4.3``
+* Sonata ``4.1``
 * Boostrap ``5.2``
 * Font awesome ``6.1``
 * Liip Imagine ``2.8``
 * Webpack ``3.0``
 * Stimulus ``3.0``
+* VichUploader ``1.1``
 
 ### Install
 ```shell
