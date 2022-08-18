@@ -4,6 +4,7 @@ sonata_admin:
 
     security:
         role_admin: ROLE_ADMIN
+        role_super_admin: ROLE_SUPER_ADMIN
 
     dashboard:
         groups:
