@@ -53,22 +53,8 @@ class SitemapSubscriber implements EventSubscriberInterface
      */
     public function populate(SitemapPopulateEvent $event): void
     {
-        $this->registerStaticPages($event->getUrlContainer());
-        $this->registerDynamicPages($event->getUrlContainer());
-    }
-
-    /**
-     * @param UrlContainerInterface $urls
-     */
-    public function registerStaticPages(UrlContainerInterface $urls): void
-    {
         // TODO : COMPLETE
-    }
-
-    private function registerDynamicPages(UrlContainerInterface $urls): void
-    {
-        // TODO : COMPLETE
-//        $this->registerExemple($urls);
+        // $this->registerExemple($urls);
     }
 
 //    private function registerExemple(UrlContainerInterface $urls): void
