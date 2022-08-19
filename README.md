@@ -13,7 +13,7 @@
 * Webpack ``3.0``
 * Stimulus ``3.0``
 * VichUploader ``1.1``
-
+* PrestaSitemap ``3.3``
 ### Install
 ```shell
 composer install
@@ -22,4 +22,8 @@ php bin/console doctrine:schema:update --force
 php bin/console doctrine:fixtures:load
 yarn install
 yarn build
+```
+### Cron
+```
+0 2 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap
 ```

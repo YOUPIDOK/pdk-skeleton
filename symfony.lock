@@ -65,6 +65,9 @@
             "tests/bootstrap.php"
         ]
     },
+    "presta/sitemap-bundle": {
+        "version": "v3.3.0"
+    },
     "sensio/framework-extra-bundle": {
         "version": "6.2",
         "recipe": {
