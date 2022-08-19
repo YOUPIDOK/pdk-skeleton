@@ -16,6 +16,7 @@
 * PrestaSitemap ``3.3``
 ### Install
 ```shell
+git flow init
 composer install
 php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
@@ -25,5 +26,5 @@ yarn build
 ```
 ### Cron
 ```
-0 */1 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap
+0 3 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap # Everyday at 03:00
 ```
