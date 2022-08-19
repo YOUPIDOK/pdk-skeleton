@@ -25,5 +25,5 @@ yarn build
 ```
 ### Cron
 ```
-0 2 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap
+0 */1 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap
 ```
