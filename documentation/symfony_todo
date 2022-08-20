@@ -1,12 +1,13 @@
 TODO :
-    - Admin users
-        - Impersonate
-        - Change password
-        - Add admin / remove Admin
+    - Admin
+        - Login
+        - Logout
+        - Sonata page manager
+        - Users
+            - Impersonate
+            - Change password
+            - Add admin / remove Admin
     - Generate user command
-    - Admin login
-    - Admin logout
-    - Admin page manager
     - Navigation
     - Breadcrumb
     - CKeditor

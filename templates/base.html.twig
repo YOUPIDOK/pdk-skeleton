@@ -6,8 +6,8 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="icon" href="/app_icon/icon_32px.png">
         <meta name="turbo-cache-control" content="no-cache">
-        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
-        {% block javascripts %}{{ encore_entry_script_tags('app')  }}{% endblock %}
+        {% block stylesheets %}{{ encore_entry_link_tags('main', null, 'main') }}{% endblock %}
+        {% block javascripts %}{{ encore_entry_script_tags('main', null, 'main')  }}{% endblock %}
         <link rel="manifest" href="/manifest.webmanifest">
     </head>
     <body>

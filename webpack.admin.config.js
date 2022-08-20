@@ -5,10 +5,10 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore
-    .setOutputPath('public/build/')
-    .setPublicPath('/build')
-    .addEntry('app', './assets/app.js')
-    .enableStimulusBridge('./assets/controllers.json')
+    .setOutputPath('public/build/admin')
+    .setPublicPath('/build/admin')
+    .addEntry('admin', './assets/admin/app.js')
+    .enableStimulusBridge('./assets/admin/controllers.json')
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
@@ -26,13 +26,13 @@ Encore
 
 if (Encore.isProduction()) {
     Encore.copyFiles({
-        from: './assets/images',
+        from: './assets/admin/images',
         to: 'images/[path][name].[hash:8].[ext]',
         pattern: /\.(png|jpg|jpeg|gif|ico|svg|webp)$/
     });
 } else {
     Encore.copyFiles({
-        from: './assets/images',
+        from: './assets/admin/images',
         to: 'images/[path][name].[hash:8].[ext]',
         pattern: /\.(png|jpg|jpeg|gif|ico|svg|webp)$/
     });

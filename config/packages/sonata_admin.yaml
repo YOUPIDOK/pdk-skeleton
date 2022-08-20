@@ -15,15 +15,18 @@ sonata_admin:
                 items:
                     - admin.user
 
-    assets:
-        extra_javascripts:
-#            - exemple.js
-
-        extra_stylesheets:
-#            - exemple.css
+#    assets:
+#        extra_javascripts:
+#            - build/admin/admin.js
+#
+#        extra_stylesheets:
+#            - build/admin/admin.css
 
     breadcrumbs:
         child_admin_route: edit
+
+    templates:
+        layout: admin/override/layout.html.twig
 
 sonata_block:
     blocks:
