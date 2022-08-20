@@ -14,7 +14,7 @@ Encore
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
+    .enableVersioning(true)
     .configureBabel((config) => {
         config.plugins.push('@babel/plugin-proposal-class-properties');
     })
