@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="fr" trgLang="fr">
+  <file id="SonataAdminBundle.fr">
+    <unit id="I9OTi17" name="Utilisateurs">
+      <segment>
+        <source>Utilisateurs</source>
+        <target>Utilisateurs</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

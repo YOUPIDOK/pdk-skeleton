@@ -8,11 +8,12 @@ sonata_admin:
 
     dashboard:
         groups:
-#            group:
-#                label: Utilisateurs
-#                icon: '<i class="fa fa-user"></i>'
-#                items:
-#                    - admin.user
+            group:
+                on_top: true
+                label: Utilisateurs
+                icon: '<i class="fa fa-users"></i>'
+                items:
+                    - admin.user
 
     assets:
         extra_javascripts:
@@ -21,11 +22,9 @@ sonata_admin:
         extra_stylesheets:
 #            - exemple.css
 
-#    templates:
-#        user_block: 'user_block.html.twig'
-
     breadcrumbs:
         child_admin_route: edit
+
 sonata_block:
     blocks:
         sonata.admin.block.admin_list:

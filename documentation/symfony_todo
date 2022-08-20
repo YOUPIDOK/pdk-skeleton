@@ -1,6 +1,12 @@
 TODO :
-    - Admin login
     - Admin users
+        - Impersonate
+        - Change password
+        - Add admin / remove Admin
+    - Generate user command
+    - Admin login
+    - Admin logout
     - Admin page manager
     - Navigation
     - Breadcrumb
+    - CKeditor

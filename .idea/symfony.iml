@@ -155,6 +155,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/knplabs/knp-menu" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vich/uploader-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/presta/sitemap-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sonata-project/doctrine-orm-admin-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-translation/symfony-storage" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-translation/extractor" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-translation/symfony-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nyholm/nsa" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/php-translation/common" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -8,7 +8,7 @@ import './styles/app.scss';
 import 'bootstrap/dist/js/bootstrap.min';
 
 // Start stimulus
-import './bootstrap';
+import './stimulus';
 
 // Start turbo
 import * as Turbo from "@hotwired/turbo";
