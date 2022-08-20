@@ -9,3 +9,6 @@ import 'bootstrap/dist/js/bootstrap.min';
 
 // Start stimulus
 import './bootstrap';
+
+// Start turbo
+import * as Turbo from "@hotwired/turbo";

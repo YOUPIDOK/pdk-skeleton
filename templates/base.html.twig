@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html {{ turbo() }} lang="{{ app.request.locale }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}</title>
         <link rel="icon" href="/app_icon/icon_32px.png">
         {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
-        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
+        {% block javascripts %}{{ encore_entry_script_tags('app')  }}{% endblock %}
         <link rel="manifest" href="/manifest.webmanifest">
     </head>
     <body>
-    {% include "partials/_header.html.twig" %}
-    {% include "partials/_navbar.html.twig" %}
-    {% include "partials/_sidebar.html.twig" %}
-    {% include "partials/_flash_messages.html.twig" %}
-    <div id="body-content">
+        {% include "partials/_header.html.twig" %}
+        {% include "partials/_navbar.html.twig" %}
+        {% include "partials/_sidebar.html.twig" %}
+        {% include "partials/_flash_messages.html.twig" %}
+        <div id="body-content">
             {% block body %}{% endblock %}
         </div>
         {% include "partials/_footer.html.twig" %}
