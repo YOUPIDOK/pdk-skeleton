@@ -52,7 +52,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __toString(): string
     {
-        return $this->getIdentity();
+        return ($this->firstname !== '' ? ($this->firstname . ' ') : '') . $this->lastname;
     }
 
     public function getIdentity(): string
@@ -162,14 +162,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function isAdmin():bool
+    public function isAdmin() :bool
     {
         return $this->hasRole('ROLE_ADMIN');
     }
 
-    public function isSuperAdmin():bool
+    public function isSuperAdmin() :bool
     {
         return $this->hasRole('ROLE_SUPER_ADMIN');
+    }
+
+    public function canImpersonate() :bool
+    {
+        return $this->hasRole('ROLE_IMPERSONATE');
     }
 
     /**

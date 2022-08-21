@@ -1,36 +1,47 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Administration connexion</title>
+        <link rel="icon" href="/app_icon/icon_32px.png">
+        <meta name="turbo-cache-control" content="no-cache">
+        {% block stylesheets %}{{ encore_entry_link_tags('admin', null, 'admin') }}{% endblock %}
+        {% block javascripts %}{{ encore_entry_script_tags('admin', null, 'admin')  }}{% endblock %}
+        <link rel="manifest" href="/manifest.webmanifest">
+    </head>
+    <body class="admin-login-body">
+        <div class="admin-login">
+            <h2 class="admin-login-header">Administration</h2>
 
-{% block title %}Administration connexion{% endblock %}
+            <form method="post" class="login-container">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
 
-{% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+                <p>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email"
+                           required autofocus placeholder="E-mail">
+                </p>
 
-    <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
-    <label for="inputEmail">E-mail</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                <p>
+                    <input type="password" name="password" id="inputPassword" class="" autocomplete="current-password"
+                           required placeholder="Mot de passe">
+                </p>
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
+                <div class="checkbox d-flex " style="margin-left: 5px;">
+                    <input class="admin-login-remember-me" type="checkbox" name="_remember_me" id="_remember_me">
+                    <label for="_remember_me">Se souvenir de moi</label>
+                </div>
+
+                <p><input type="submit" value="Connexion"></p>
+            </form>
         </div>
-    #}
+    </body>
+</html>
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Connexion
-    </button>
-</form>
-{% endblock %}

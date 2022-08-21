@@ -27,7 +27,7 @@ sonata_admin:
 
     templates:
         layout: admin/override/layout.html.twig
-
+        user_block: admin/override/user_block.html.twig
 
 sonata_block:
     blocks:

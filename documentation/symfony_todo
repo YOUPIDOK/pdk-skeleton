@@ -1,11 +1,6 @@
 TODO :
     - Admin
         - Sonata page manager
-        - Login
-            - Admin form
-        - Logout
-        - Users
-            - Impersonate
     - Navigation
     - Breadcrumb
     - CKeditor
@@ -16,3 +11,4 @@ TODO :
     - User and group with roles
     - Turbo admin
     - Email reset password
+    - User enable

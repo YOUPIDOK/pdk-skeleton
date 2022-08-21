@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/cssfamily=Open+Sans:400,700);
+
+.admin-login-body {
+  background: #eee !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.admin-login {
+  width: 400px;
+  margin: 80px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.admin-login-header,
+.admin-login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.admin-login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.login-container {
+  background: white;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.admin-login p {
+  padding: 12px;
+}
+
+.admin-login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.admin-login input[type="email"],
+.admin-login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.admin-login input[type="email"]:focus,
+.admin-login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.admin-login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.admin-login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.admin-login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+.admin-login-remember-me {
+  width: 20px !important;
+  accent-color: #28d;
+}

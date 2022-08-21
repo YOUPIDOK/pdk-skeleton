@@ -68,7 +68,8 @@ final class UserAdmin extends AbstractAdmin
                 'actions' => [
                     'edit' => ['template' => 'admin/user/list/edit_action.html.twig'],
                     'delete' => ['template' => 'admin/user/list/delete_action.html.twig'],
-                    'edit_is_admin' => ['template' => 'admin/user/list/edit_is_admin_action.html.twig']
+                    'edit_is_admin' => ['template' => 'admin/user/list/edit_is_admin_action.html.twig'],
+                    'impersonate' => ['template' => 'admin/user/list/impersonate_action.html.twig'],
                 ],
             ]);
     }

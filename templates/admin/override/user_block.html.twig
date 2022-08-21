@@ -1,0 +1,14 @@
+{% block user_block %}
+    {% if app.user %}
+        <div class="text-center bg-primary fs-1">
+            <div>{{ app.user }}</div>
+        </div>
+
+        <li class="user-footer">
+            <div class="text-center">
+                <a href="{{ path('admin_logout') }}" class="btn btn-default btn-flat"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
+            </div>
+        </li>
+    {% endif %}
+{% endblock %}
+
