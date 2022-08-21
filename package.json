@@ -2,6 +2,7 @@
     "devDependencies": {
         "@hotwired/stimulus": "^3.0.0",
         "@symfony/stimulus-bridge": "^3.2.0",
+        "@symfony/ux-turbo": "file:vendor/symfony/ux-turbo/Resources/assets",
         "@symfony/webpack-encore": "^3.0.0",
         "core-js": "^3.23.0",
         "file-loader": "^6.0.0",
@@ -15,14 +16,13 @@
     "scripts": {
         "dev-server": "encore dev-server",
         "dev": "encore dev -c webpack.main.config.js & encore dev -c webpack.admin.config.js & wait",
-        "watch": "encore dev --watch -c webpack.main.config.js & encore dev --watch -c webpack.admin.config.js ",
-        "watch-main": "encore dev --watch -c webpack.main.config.js",
+        "watch": "encore dev --watch -c webpack.main.config.js",
         "watch-admin": "encore dev --watch -c webpack.admin.config.js",
         "build": "encore production --progress -c webpack.main.config.js & encore production --progress -c webpack.admin.config.js & wait"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.1.2",
-        "@hotwired/turbo": "^7.1.0",
+        "@hotwired/turbo": "^7.0.1",
         "@popperjs/core": "^2.11.5",
         "bootstrap": "5.2.0"
     }

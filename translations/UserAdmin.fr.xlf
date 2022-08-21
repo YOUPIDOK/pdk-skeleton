@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="fr" trgLang="fr">
+  <file id="UserAdmin.fr">
+    <unit id="7f4FugA" name="User Create">
+      <segment>
+        <source>User Create</source>
+        <target>Création</target>
+      </segment>
+    </unit>
+    <unit id="sIwK89t" name="User List">
+      <segment>
+        <source>User List</source>
+        <target>Utilisateurs</target>
+      </segment>
+    </unit>
+    <unit id="7TE8nTi" name="Plain Password">
+      <segment>
+        <source>Plain Password</source>
+        <target>Mot de passe</target>
+      </segment>
+    </unit>
+    <unit id="tRLZfny" name="User">
+      <segment>
+        <source>User</source>
+        <target>Utilisateur</target>
+      </segment>
+    </unit>
+    <unit id="lpzL089" name="Email">
+      <segment>
+        <source>Email</source>
+        <target>E-mail</target>
+      </segment>
+    </unit>
+    <unit id="oEYw74v" name="Gender">
+      <segment>
+        <source>Gender</source>
+        <target>Genre</target>
+      </segment>
+    </unit>
+    <unit id="htiPHRy" name="Lastname">
+      <segment>
+        <source>Lastname</source>
+        <target>Nom</target>
+      </segment>
+    </unit>
+    <unit id="ZHz6kbI" name="Firstname">
+      <segment>
+        <source>Firstname</source>
+        <target>Prénom</target>
+      </segment>
+    </unit>
+    <unit id="bA7clYF" name="Mot De Passe">
+      <segment>
+        <source>Mot De Passe</source>
+        <target>Mot De Passe</target>
+      </segment>
+    </unit>
+    <unit id="j2_0639" name="Security">
+      <segment>
+        <source>Security</source>
+        <target>Sécurité</target>
+      </segment>
+    </unit>
+    <unit id="krmGwKZ" name="Genral">
+      <segment>
+        <source>Genral</source>
+        <target>Genral</target>
+      </segment>
+    </unit>
+    <unit id="yRDUdNz" name="General">
+      <segment>
+        <source>General</source>
+        <target>Général</target>
+      </segment>
+    </unit>
+    <unit id="588_9PF" name="Password">
+      <segment>
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </segment>
+    </unit>
+    <unit id="QcfhTNm" name="Is Admin">
+      <segment>
+        <source>Is Admin</source>
+        <target>Administrateur ?</target>
+      </segment>
+    </unit>
+    <unit id="QzCtRGq" name="Is Super Admin">
+      <segment>
+        <source>Is Super Admin</source>
+        <target>Super administrateur ?</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

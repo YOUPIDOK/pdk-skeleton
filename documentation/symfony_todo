@@ -5,9 +5,12 @@ TODO :
         - Sonata page manager
         - Users
             - Impersonate
-            - Change password
-            - Add admin / remove Admin
-    - Generate user command
     - Navigation
     - Breadcrumb
     - CKeditor
+    - Default error page
+    - Textearea, text, checkbox => square border
+    - cutom notificatio with bg
+    - simple login with save me checkbox
+    - user and group with roles
+    - turbo admin

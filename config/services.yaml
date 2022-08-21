@@ -16,4 +16,7 @@ services:
     admin.user:
         class: App\Admin\UserAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\User, controller: ~, manager_type: orm, group: admin, label: User }
+            - { name: sonata.admin, model_class: App\Entity\User\User, controller: ~, manager_type: orm, group: admin, label: User }
+        calls:
+            - [ setUserPasswordHasher, [ '@security.user_password_hasher' ] ]
+            - [ setTranslationDomain, [ 'UserAdmin' ] ]

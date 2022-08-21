@@ -161,6 +161,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-translation/symfony-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nyholm/nsa" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-translation/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/stof/doctrine-extensions-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/ux-turbo" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

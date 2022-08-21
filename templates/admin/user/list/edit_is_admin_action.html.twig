@@ -1,0 +1,24 @@
+{% if is_granted('ROLE_SUPER_ADMIN') %}
+    {% if object.isAdmin %}
+        {% if object.isSuperAdmin %}
+            <a href="{{ path('user_admin__remove_super_admin_role', {user: object.id}) }}" class="btn btn-sm btn-default edit_link" title="Retirer les droits super administrateur">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                Super Administrateur
+            </a>
+        {% else %}
+            <a href="{{ path('user_admin__remove_admin_role', {user: object.id}) }}" class="btn btn-sm btn-default edit_link" title="Retirer les droits administrateur">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                Administrateur
+            </a>
+            <a href="{{ path('user_admin__add_super_admin_role', {user: object.id}) }}" class="btn btn-sm btn-default edit_link" title="Ajouter les droits super administrateur">
+                <i class="fas fa-plus" aria-hidden="true"></i>
+                Super administrateur
+            </a>
+        {% endif %}
+    {% else %}
+        <a href="{{ path('user_admin__add_admin_role', {user: object.id}) }}" class="btn btn-sm btn-default edit_link" title="Ajouter les droits administrateur">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+            Administrateur
+        </a>
+    {% endif %}
+{% endif %}
