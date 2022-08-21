@@ -34,12 +34,20 @@
                        value="{{ csrf_token('authenticate') }}"
                 >
 
-                <div class="checkbox d-flex " style="margin-left: 5px;">
+                <div class="d-flex " style="margin-left: 5px;">
                     <input class="admin-login-remember-me" type="checkbox" name="_remember_me" id="_remember_me">
                     <label for="_remember_me">Se souvenir de moi</label>
                 </div>
 
                 <p><input type="submit" value="Connexion"></p>
+
+                <div class="text-center">
+                    <img src="{{ asset('app_icon/icon_100px.png') }}" width="50px">
+                </div>
+
+                <div class="text-center">
+                    <a href="{{ path('homepage') }}" class="admin-homepage-link">Retour à la page d'accueil</a>
+                </div>
             </form>
         </div>
     </body>

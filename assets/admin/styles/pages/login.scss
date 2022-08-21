@@ -11,7 +11,6 @@
   font-size: 16px;
 }
 
-/* Reset top and bottom margins from certain elements */
 .admin-login-header,
 .admin-login p {
   margin-top: 0;
@@ -19,7 +18,7 @@
 }
 
 .admin-login-header {
-  background: #28d;
+  background: #337AB7;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -32,7 +31,6 @@
   padding: 12px;
 }
 
-/* Every row inside .login-container is defined with p tags */
 .admin-login p {
   padding: 12px;
 }
@@ -56,29 +54,31 @@
   color: #555;
 }
 
-/* Text fields' focus effect */
 .admin-login input[type="email"]:focus,
 .admin-login input[type="password"]:focus {
   border-color: #888;
 }
 
 .admin-login input[type="submit"] {
-  background: #28d;
+  background: #337AB7;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
 .admin-login input[type="submit"]:hover {
-  background: #17c;
+  background: #337AA9;
 }
 
-/* Buttons' focus effect */
 .admin-login input[type="submit"]:focus {
-  border-color: #05a;
+  border-color: #216498;
 }
 
 .admin-login-remember-me {
   width: 20px !important;
-  accent-color: #28d;
+  accent-color: #337AB7;
+}
+
+.admin-homepage-link {
+  color: black; font-size: 15px; text-decoration: none
 }
