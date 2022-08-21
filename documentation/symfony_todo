@@ -1,8 +1,9 @@
 TODO :
     - Admin
-        - Login
-        - Logout
         - Sonata page manager
+        - Login
+            - Admin form
+        - Logout
         - Users
             - Impersonate
     - Navigation
@@ -10,7 +11,8 @@ TODO :
     - CKeditor
     - Default error page
     - Textearea, text, checkbox => square border
-    - cutom notificatio with bg
-    - simple login with save me checkbox
-    - user and group with roles
-    - turbo admin
+    - Cutom notificatio with bg
+    - Simple login with save me checkbox
+    - User and group with roles
+    - Turbo admin
+    - Email reset password

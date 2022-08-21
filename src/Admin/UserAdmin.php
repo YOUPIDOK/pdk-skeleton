@@ -116,11 +116,14 @@ final class UserAdmin extends AbstractAdmin
             ->end()
         ;
 
+        $this_ = $this;
 
         $form->getFormBuilder()->addEventListener(
             FormEvents::SUBMIT,
-            function (SubmitEvent $event) {
+            function (SubmitEvent $event) use($this_){
                 $user = $event->getData();
+                $this_->getRequest()->getSession()->getFlashBag(    )
+                    ->add('success', 'Le mot de passe à bien été reinitialiser.');
                 if ($user->getPlainPassword()) {
                     $encoded = $this->userPasswordHasher->hashPassword($user, $user->getPlainPassword());
                     $user->setPassword($encoded);
