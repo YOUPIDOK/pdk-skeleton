@@ -17,7 +17,7 @@ class GenderEnum
     public static array $prefixs = [
         self::MAN => 'M.',
         self::WOMAN => 'Mme',
-        self::NON_BINARY => null,
+        self::NON_BINARY => '',
     ];
 
     public static function getGender($key): string
