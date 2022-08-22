@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Command;
+namespace App\Command\Tool;
 
 use App\Entity\User\GenderEnum;
 use App\Entity\User\User;
@@ -52,11 +52,13 @@ class UserCreateCommand extends Command
 
         if ($io->confirm('Is admin ? ', false)) {
              $user->addRole('ROLE_ADMIN');
+        }else{
+            if ($io->confirm('Is super admin ? ', false)) {
+                $user->addRole('ROLE_SUPER_ADMIN');
+            }
         }
 
-        if ($io->confirm('Is super admin ? ', false)) {
-            $user->addRole('ROLE_SUPER_ADMIN');
-        }
+
 
         $this->em->persist($user);
         $this->em->flush();

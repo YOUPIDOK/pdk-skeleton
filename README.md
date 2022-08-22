@@ -28,6 +28,10 @@ php bin/console doctrine:fixtures:load
 yarn install
 yarn build
 ```
+### Command
+```shell
+php bin\console user:create # Create user
+```
 ### Cron
 ```
 0 3 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap # Everyday at 03:00

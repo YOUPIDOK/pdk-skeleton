@@ -19,8 +19,8 @@ security:
         admin:
             context: user
             pattern: /admin(.*)
-            custom_authenticator: App\Security\AdminAuthenticator
-            user_checker: App\Security\AdminChecker
+            custom_authenticator: App\Security\Admin\AdminAuthenticator
+            user_checker: App\Security\Admin\AdminChecker
             form_login:
                 provider: app_user_provider
                 login_path: admin_login
