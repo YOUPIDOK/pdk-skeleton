@@ -2,18 +2,11 @@
     <div class="container-fluid">
         <i class="fa-solid fa-ellipsis-vertical btn text-black" data-bs-toggle="offcanvas"
            data-bs-target="#sidebar" aria-controls="sidebar"></i>
-        <a class="navbar-brand" href="{{ path('homepage') }}">Navbar</a>
+        <a class="navbar-brand" href="{{ path('homepage') }}"><img src="{{ asset('app_icon/icon_100px.png') }}" width="40px"></a>
         <i class="fa-solid fa-bars btn navbar-toggler border-0 text-black" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></i>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ path('uikit') }}">Uikit</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ path('test') }}">Test</a>
-                </li>
-            </ul>
+            {{ knp_menu_render('main') }}
         </div>
     </div>
 </nav>

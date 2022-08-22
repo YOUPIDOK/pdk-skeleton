@@ -12,7 +12,8 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-# Admin Part
+#################################################### Admin Part ########################################################
+
     admin.user:
         class: App\Admin\UserAdmin
         tags:
@@ -20,3 +21,15 @@ services:
         calls:
             - [ setUserPasswordHasher, [ '@security.user_password_hasher' ] ]
             - [ setTranslationDomain, [ 'UserAdmin' ] ]
+
+########################################################################################################################
+#################################################### Menu Part #########################################################
+
+    app.menu_builder:
+        class: App\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory"]
+        tags:
+            - { name: knp_menu.menu_builder, method: createMainMenu, alias: main } # the previous menu
+            - { name: knp_menu.menu_builder, method: createSidebarMenu, alias: sidebar } # Named "sidebar" this time
+
+########################################################################################################################

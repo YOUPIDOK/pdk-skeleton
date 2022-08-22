@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
-class UikitController extends CustomAbstractController
+class UikitController extends AbstractController
 {
     #[Route('/uikit', name: 'uikit')]
     public function uikit(): NotFoundHttpException|Response

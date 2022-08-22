@@ -12,6 +12,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.12",
         "gedmo/doctrine-extensions": "^3.8",
+        "knplabs/knp-menu-bundle": "^3.2",
         "liip/imagine-bundle": "^2.8",
         "php-translation/symfony-bundle": "^0.12.6",
         "phpdocumentor/reflection-docblock": "^5.3",

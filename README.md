@@ -6,16 +6,19 @@
 * Node ``16``
 ### Dependencies
 #### Back-end
-* Symfony ``6.1``
-* Sonata ``4.1``
-* PrestaSitemap ``3.3``
-* VichUploader ``1.1``
-* Liip Imagine ``2.8``
+* PHP
+  * Symfony ``6.1``
+  * Sonata ``4.1``
+  * PrestaSitemap ``3.3``
+  * VichUploader ``1.1``
+  * Liip Imagine ``2.8``
+  * KnpMenu ``3.2``
+* JS 
+  * Webpack ``3.0``
+  * Hotwired Stimulus ``3.0``
+  * Hotwired Turbo ``7.1``
 
 #### Front-end
-* Webpack ``3.0``
-* Hotwired Stimulus ``3.0``
-* Hotwired Turbo ``7.1``
 * Boostrap ``5.2``
 * Font awesome ``6.1``
 ### Install

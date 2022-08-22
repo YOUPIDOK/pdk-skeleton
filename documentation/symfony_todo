@@ -1,7 +1,4 @@
 TODO :
-    - Admin
-        - Sonata page manager
-    - Navigation
     - Breadcrumb
     - CKeditor
     - Default error page
@@ -14,4 +11,3 @@ TODO :
 At the end
 TODO :
     - Bundle
-    - Circle CI
