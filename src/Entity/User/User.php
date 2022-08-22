@@ -164,7 +164,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function isAdmin() :bool
     {
-        return $this->hasRole('ROLE_ADMIN');
+        return $this->hasRole('ROLE_ADMIN') || $this->hasRole('ROLE_SUPER_ADMIN');
     }
 
     public function isSuperAdmin() :bool
