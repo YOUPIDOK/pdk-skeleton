@@ -10,10 +10,16 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\FieldDescription\FieldDescriptionInterface;
+use Sonata\AdminBundle\Filter\Model\FilterData;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollectionInterface;
+use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQueryInterface;
 use Sonata\DoctrineORMAdminBundle\Filter\BooleanFilter;
+use Sonata\DoctrineORMAdminBundle\Filter\CallbackFilter;
+use Sonata\DoctrineORMAdminBundle\Filter\ChoiceFilter;
 use Sonata\Form\Type\BooleanType;
 use Symfony\Component\Form\Event\SubmitEvent;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -34,12 +40,60 @@ final class UserAdmin extends AbstractAdmin
         return $this;
     }
 
+    protected function configureRoutes(RouteCollectionInterface $collection): void
+    {
+        $collection->remove('export');
+        parent::configureRoutes($collection);
+    }
+
+
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
         $filter
+            ->add('gender', ChoiceFilter::class, [
+                'label' => 'Genre',
+                'field_type' => ChoiceType::class,
+                'field_options' => [
+                    'choices' => GenderEnum::getChoices()
+                ],
+            ])
             ->add('firstname')
             ->add('lastname')
             ->add('email')
+            ->add('isAdmin', CallbackFilter::class, [
+                'callback' => static function(ProxyQueryInterface $query, string $alias, string $field, FilterData $data): bool {
+                    if (!$data->hasValue()) {
+                        return false;
+                    }
+
+                    $query
+                        ->andWhere(
+                            $query->getQueryBuilder()->expr()->orX(
+                                'o.roles LIKE :roles_admin',
+                                'o.roles LIKE :roles_super_admin'
+                            )
+                        )
+                        ->setParameter('roles_admin', '%"ROLE_ADMIN"%')
+                        ->setParameter('roles_super_admin', '%"ROLE_SUPER_ADMIN"%');
+
+                    return true;
+                },
+                'field_type' => CheckboxType::class
+            ])
+            ->add('isSuperAdmin', CallbackFilter::class, [
+                'callback' => static function(ProxyQueryInterface $query, string $alias, string $field, FilterData $data): bool {
+                    if (!$data->hasValue()) {
+                        return false;
+                    }
+
+                    $query
+                        ->andWhere('o.roles LIKE :roles_super_admin_su')
+                        ->setParameter('roles_super_admin_su', '%"ROLE_SUPER_ADMIN"%');
+
+                    return true;
+                },
+                'field_type' => CheckboxType::class
+            ])
         ;
     }
 

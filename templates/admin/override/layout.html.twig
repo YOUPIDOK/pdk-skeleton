@@ -9,3 +9,8 @@
     {{ encore_entry_script_tags('admin', null, 'admin')  }}
     {{ parent() }}
 {% endblock %}
+
+{% block meta_tags %}
+    <link rel="icon" href="/app_icon/icon_32px.png">
+    {{ parent() }}
+{% endblock %}

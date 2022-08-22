@@ -1,12 +1,23 @@
 sonata_admin:
     title: 'Administration'
     title_logo: '/app_icon/icon_100px.png'
+    show_mosaic_button: false
 
     security:
         role_admin: ROLE_ADMIN
         role_super_admin: ROLE_SUPER_ADMIN
 
     dashboard:
+        blocks:
+            -
+                class: col-lg-3 col-xs-6
+                position: top
+                type: sonata.admin.block.stats
+                settings:
+                    code: admin.user
+                    icon: fa fa-users
+                    text: "Utilisateurs"
+                    color: bg-red
         groups:
             group:
                 on_top: true

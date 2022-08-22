@@ -6,9 +6,12 @@ TODO :
     - CKeditor
     - Default error page
     - Textearea, text, checkbox => square border
-    - Cutom notificatio with bg
     - Simple login with save me checkbox
     - User and group with roles
-    - Turbo admin
     - Email reset password
     - User enable
+
+At the end
+TODO :
+    - Bundle
+    - Circle CI
