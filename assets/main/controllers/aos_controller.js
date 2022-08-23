@@ -1,7 +1,9 @@
 import { Controller } from '@hotwired/stimulus';
+import AOS from 'aos/dist/aos'
 
 export default class extends Controller {
-    connect() {
-        console.log('example connect');
+
+    initialize() {
+        AOS.init()
     }
 }

@@ -1,15 +1,15 @@
 TODO :
-    - Intall & set Uikit AOS https://michalsnik.github.io/aos/
     - Breadcrumb
-    - CKeditor
+        - Uikit
+    - Ckeditor in admin
     - Default error page
-    - Textearea, text, checkbox => square border
     - Simple login with save me checkbox
     - User and group with roles
     - User enable
     - Email reset password
         - main
         - admin
+
 
 At the end
 TODO :

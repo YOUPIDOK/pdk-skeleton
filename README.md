@@ -21,6 +21,7 @@
 #### Front-end
 * Boostrap ``5.2``
 * Font awesome ``6.1``
+* AOS ``2.3``
 ### Install
 ```shell
 git flow init
