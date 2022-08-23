@@ -2,8 +2,8 @@
 
 namespace App\Command\Tool;
 
-use App\Entity\User\GenderEnum;
 use App\Entity\User\User;
+use App\Enum\User\GenderEnum;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;

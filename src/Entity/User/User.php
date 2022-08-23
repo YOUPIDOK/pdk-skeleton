@@ -2,6 +2,7 @@
 
 namespace App\Entity\User;
 
+use App\Enum\User\GenderEnum;
 use App\Repository\UserRepository;
 use DateTime;
 use Doctrine\DBAL\Types\Types;

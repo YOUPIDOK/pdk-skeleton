@@ -18,7 +18,9 @@
         "dev": "encore dev -c webpack.main.config.js & encore dev -c webpack.admin.config.js & wait",
         "watch": "encore dev --watch -c webpack.main.config.js",
         "watch-admin": "encore dev --watch -c webpack.admin.config.js",
-        "build": "encore production --progress -c webpack.main.config.js & encore production --progress -c webpack.admin.config.js & wait"
+        "build": "encore production --progress -c webpack.main.config.js & encore production --progress -c webpack.admin.config.js & wait",
+        "build-main": "encore production --progress -c webpack.main.config.js",
+        "build-admin": "encore production --progress -c webpack.admin.config.js"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.1.2",

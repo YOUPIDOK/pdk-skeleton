@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity\User;
+namespace App\Enum\User;
 
 class GenderEnum
 {
