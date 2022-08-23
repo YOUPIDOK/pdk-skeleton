@@ -23,23 +23,25 @@ class MenuBuilder
             'attributes' => ['class' => 'navbar-nav']
         ]);
 
-        $menu
-            ->addChild('Uikit', [
-                'route' => 'uikit',
-                'attributes' => ['class' => 'nav-item'],
-                'linkAttributes' => ['class' => 'nav-link']
-            ])
-            ->setExtra('icon', 'fa-solid fa-brush')
-        ;
+        if ($_ENV['APP_ENV'] === 'dev') {
+            $menu
+                ->addChild('Uikit', [
+                    'route' => 'uikit',
+                    'attributes' => ['class' => 'nav-item'],
+                    'linkAttributes' => ['class' => 'nav-link']
+                ])
+                ->setExtra('icon', 'fa-solid fa-brush')
+            ;
 
-        $menu
-            ->addChild('Test', [
-                'route' => 'test',
-                'attributes' => ['class' => 'nav-item'],
-                'linkAttributes' => ['class' => 'nav-link']
-            ])
-            ->setExtra('icon', 'fa-solid fa-gear')
-        ;
+            $menu
+                ->addChild('Test', [
+                    'route' => 'test',
+                    'attributes' => ['class' => 'nav-item'],
+                    'linkAttributes' => ['class' => 'nav-link']
+                ])
+                ->setExtra('icon', 'fa-solid fa-gear')
+            ;
+        }
 
         if ($this->security->isGranted('ROLE_ADMIN')) {
             $menu
@@ -69,21 +71,23 @@ class MenuBuilder
             ->setExtra('icon', 'fa-solid fa-house')
         ;
 
-        $menu
-            ->addChild('Uikit', [
-                'route' => 'uikit',
-                'attributes' => ['class' => 'item']
-            ])
-            ->setExtra('icon', 'fa-solid fa-brush')
-        ;
+        if ($_ENV['APP_ENV'] === 'dev') {
+            $menu
+                ->addChild('Uikit', [
+                    'route' => 'uikit',
+                    'attributes' => ['class' => 'item']
+                ])
+                ->setExtra('icon', 'fa-solid fa-brush')
+            ;
 
-        $menu
-            ->addChild('Test', [
-                'route' => 'test',
-                'attributes' => ['class' => 'item']
-            ])
-            ->setExtra('icon', 'fa-solid fa-gear')
-        ;
+            $menu
+                ->addChild('Test', [
+                    'route' => 'test',
+                    'attributes' => ['class' => 'item']
+                ])
+                ->setExtra('icon', 'fa-solid fa-gear')
+            ;
+        }
 
         if ($this->security->isGranted('ROLE_ADMIN')) {
             $menu

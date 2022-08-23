@@ -1,19 +1,35 @@
 ul.sidebar-menu {
   // ..
 
-  .item {
-    // ..
-
-    .current {
-      // ..
+  li.item {
+    a {
+      color: $dark;
+      text-decoration: none;
     }
-
-    .first {
-      // ..
-    }
-
-    .last {
-      // ..
+    a:hover {
+      color: $primary !important;
     }
   }
+
+  li.item.current {
+    a {
+      color: $primary;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: $dark !important;
+    }
+  }
+
+  //li.item.first {
+  //  a {
+  //    // ..
+  //  }
+  //}
+  //
+  //li.item.last {
+  //  a {
+  //    // ..
+  //  }
+  //}
 }

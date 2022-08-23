@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-5 text-danger text-center">Une erreur s'est produite.</h1>
+        <div class="d-flex justify-content-center">
+            <a href="{{ path('homepage') }}" class="btn btn-secondary w-75 mt-2">
+                <i class="fa-solid fa-house"></i> Retour à la page d'accueil
+            </a>
+        </div>
+    </div>
+{% endblock %}
