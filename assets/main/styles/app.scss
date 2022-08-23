@@ -1,11 +1,9 @@
 @import "../fonts/_imports";
 @import "variables/_imports";
+@import "~bootstrap/scss/bootstrap";
 @import "components/_imports";
 @import "partials/_imports";
 @import "pages/_imports";
-
-/* Libs */
-@import "~bootstrap/scss/bootstrap";
 
 body {
   //font-family : "roboto", sans-serif;
@@ -13,14 +11,11 @@ body {
   margin: 0;
 
   /* Fix Footer to bottom of the page */
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
   /**** ****/
-}
-#body-content {
-  padding: 5px;
-  margin-bottom: 30px; /* Height of the footer */
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* ScrollBar part */

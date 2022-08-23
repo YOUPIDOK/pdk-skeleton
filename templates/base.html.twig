@@ -14,10 +14,13 @@
         {% include "partials/_header.html.twig" %}
         {% include "partials/_navbar.html.twig" %}
         {% include "partials/_sidebar.html.twig" %}
-        {% include "partials/_flash_messages.html.twig" %}
-        <div id="body-content">
-            {% block body %}{% endblock %}
-        </div>
+        <main>
+            {% include "partials/_flash_messages.html.twig" %}
+
+            <div class="p-2">
+                {% block body %}{% endblock %}
+            </div>
+        </main>
         {% include "partials/_footer.html.twig" %}
     </body>
 </html>
