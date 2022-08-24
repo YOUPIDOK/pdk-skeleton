@@ -25,11 +25,12 @@
 * ChoiceJs ``10.1``
 ### Install
 ```shell
+git remote remove origin
+git remote add origin git@github.com:{ user }/{ project_name }.git
 git flow init
 composer install
 php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
-php bin/console doctrine:fixtures:load
 yarn install
 yarn build
 ```
