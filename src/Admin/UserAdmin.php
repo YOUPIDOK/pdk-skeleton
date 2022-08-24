@@ -55,6 +55,7 @@ final class UserAdmin extends AbstractAdmin
             ->add('firstname')
             ->add('lastname')
             ->add('email')
+            ->add('enabled')
             ->add('isAdmin', CallbackFilter::class, [
                 'callback' => static function(ProxyQueryInterface $query, string $alias, string $field, FilterData $data): bool {
                     if (!$data->hasValue()) {
@@ -103,6 +104,7 @@ final class UserAdmin extends AbstractAdmin
             ->add('firstname')
             ->add('lastname')
             ->add('email')
+            ->add('enabled')
             ->add('isAdmin', FieldDescriptionInterface::TYPE_BOOLEAN,[
                 'accessor' => function ($user) {
                     return $user->isAdmin();
@@ -145,24 +147,22 @@ final class UserAdmin extends AbstractAdmin
             ->end()
 
             ->tab('security')
-                ->with('password')
-                ->add('plainPassword', RepeatedType::class, [
-                    'type' => PasswordType::class,
-                    'required' => (!$this->getSubject() || null === $this->getSubject()->getId()),
-                    'first_options' => [
-                        'label' => 'Mot de passe',
-                        'row_attr' => [
-                            'class' => 'col-md-6'
-                        ]
-                    ],
-                    'second_options' => [
-                        'label' => 'Confirmation du mot de passe',
-                        'row_attr' => [
-                            'class' => 'col-md-6'
-                        ]
-                    ],
-                    'invalid_message' => 'Les mots de passe sont différents',
-                ])
+                ->with('password', ['class' => 'col-md-6'])
+                    ->add('plainPassword', RepeatedType::class, [
+                        'type' => PasswordType::class,
+                        'required' => (!$this->getSubject() || null === $this->getSubject()->getId()),
+                        'first_options' => [
+                            'label' => 'Mot de passe',
+                        ],
+                        'second_options' => [
+                            'label' => 'Confirmation du mot de passe',
+                        ],
+                        'invalid_message' => 'Les mots de passe sont différents',
+                    ])
+                ->end()
+                ->with('access', ['class' => 'col-md-6'])
+                    ->add('enabled')
+                ->end()
             ->end()
         ;
 

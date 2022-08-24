@@ -91,5 +91,17 @@
         <target>Super administrateur ?</target>
       </segment>
     </unit>
+    <unit id="ksHN.fT" name="Enabled">
+      <segment>
+        <source>Enabled</source>
+        <target>Actif ?</target>
+      </segment>
+    </unit>
+    <unit id="7Fugq7c" name="Access">
+      <segment>
+        <source>Access</source>
+        <target>Accès au site</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

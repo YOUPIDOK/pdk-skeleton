@@ -15,6 +15,7 @@ use Symfony\Component\Validator\Constraints\Length;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity('email')]
+#[ORM\Table(name: 'user__user')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     use TimestampableEntity;
@@ -30,9 +31,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private array $roles = [];
 
-    /**
-     * @var string The hashed password
-     */
     #[ORM\Column]
     private string $password = '';
 
@@ -50,6 +48,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?DateTime $updatePasswordAt = null;
+
+    #[ORM\Column]
+    private bool $enabled = false;
 
     public function __toString(): string
     {
@@ -257,6 +258,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUpdatePasswordAt(?DateTime $updatePasswordAt): self
     {
         $this->updatePasswordAt = $updatePasswordAt;
+
+        return $this;
+    }
+
+    public function isEnabled(): ?bool
+    {
+        return $this->enabled;
+    }
+
+    public function setEnabled(bool $enabled): self
+    {
+        $this->enabled = $enabled;
 
         return $this;
     }

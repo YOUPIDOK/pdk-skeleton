@@ -44,19 +44,29 @@ class UserCreateCommand extends Command
 
                 return $email;
             }))
-            ->setGender($io->choice('Gender ', GenderEnum::$genders, GenderEnum::MAN))
+            ->setGender($io->choice('Gender', GenderEnum::$genders, GenderEnum::MAN))
             ->setUpdatePasswordAt(new DateTime('now'))
+            ->setEnabled($io->confirm('Enabled', false))
         ;
 
         $user->setPassword($this->userPasswordHasher->hashPassword($user, $io->askHidden('Password')));
 
-        if ($io->confirm('Is admin ? ', false)) {
-             $user->addRole('ROLE_ADMIN');
+        if ($io->confirm('Is super admin ?', false)) {
+            $user->addRole('ROLE_SUPER_ADMIN');
         }else{
-            if ($io->confirm('Is super admin ? ', false)) {
-                $user->addRole('ROLE_SUPER_ADMIN');
+            if ($io->confirm('Is admin ?', false)) {
+                $user->addRole('ROLE_ADMIN');
             }
         }
+
+        $addNewRole = $io->confirm('Other role? ');
+        while ($addNewRole) {
+            $role = $io->ask('Role ','');
+            $user->addRole($role);
+            $addNewRole = $io->confirm('Other role ?');
+        }
+
+        // Autre roles
 
 
 
