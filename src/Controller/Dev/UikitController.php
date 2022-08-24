@@ -2,7 +2,7 @@
 
 namespace App\Controller\Dev;
 
-use App\Form\UiKitType;
+use App\Form\Dev\UiKitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

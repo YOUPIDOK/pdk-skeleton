@@ -5,7 +5,7 @@
 {% block body %}
 
     <div class="container">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center flex-wrap">
             <div style="width: 80px"><div class="text-center">Primary</div><div class="bg-primary p-3"></div></div>
             <div style="width: 80px"><div class="text-center">Secondary</div><div class="bg-secondary p-3"></div></div>
             <div style="width: 80px"><div class="text-center">Success</div><div class="bg-success p-3"></div></div>
@@ -160,18 +160,21 @@
         <div>
             <div class="h3 text-decoration-underline">AOS</div>
             <div>data-controller="aos"</div>
-            <div data-controller="aos" class="d-flex justify-content-between gap-2">
-                <div class="text-primary p-4 border border-primary" data-aos="fade-up" data-aos-duration="3000">
-                    data-aos="fade-{ (up / down) - (right / left) } data-aos-duration="3000"
+            <div data-controller="aos" class="row">
+                <div class="col-md-4 my-1">
+                    <div class="text-primary p-4 border border-primary h-100" data-aos="fade-up" data-aos-duration="3000">
+                        data-aos="fade-{ (up / down) - (right / left) } data-aos-duration="3000"
+                    </div>
                 </div>
-                <div class="text-secondary p-4 border border-secondary" data-aos="flip-right" data-aos-duration="1000">
-                    data-aos="flip-{ (up / down) - (right / left) } data-aos-duration="1000"
+                <div class="col-md-4 my-1">
+                    <div class="text-secondary p-4 border border-secondary h-100" data-aos="flip-right" data-aos-duration="200">
+                        data-aos="flip-{ (up / down) - (right / left) } data-aos-duration="2000"
+                    </div>
                 </div>
-                <div class="text-success p-4 border border-success" data-aos="zoom-in" data-aos-duration="2000">
-                    data-aos="zoom-{ (in / out) - (up / right / left / down) } data-aos-duration="2000"
-                </div>
-                <div class="text-danger p-4 border border-danger" data-aos="fade-down" data-aos-duration="2000">
-                    data-aos="fade-down data-aos-duration="3000"
+                <div class="col-md-4 my-1">
+                    <div class="text-success p-4 border border-success h-100" data-aos="zoom-in" data-aos-duration="1000">
+                        data-aos="zoom-{ (in / out) - (up / right / left / down) } data-aos-duration="1000"
+                    </div>
                 </div>
             </div>
             <hr>
@@ -285,8 +288,6 @@
                 </div>
             </div>
             {{ form_end(form) }}
-
-            <hr>
         </div>
     </div>
 

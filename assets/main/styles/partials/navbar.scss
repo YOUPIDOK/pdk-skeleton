@@ -3,3 +3,8 @@
     text-decoration: underline;
   }
 }
+
+.main-navbar {
+  transition-duration: 1s;
+  z-index: $zindex-navbar;
+}
