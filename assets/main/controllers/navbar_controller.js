@@ -7,17 +7,30 @@ export default class extends Controller {
     oldScrollY = 0;
 
     connect() {
-
         window.addEventListener('scroll', () => {
+            let main = document.querySelector("main");
+
+            // If scroll down
             if (this.oldScrollY < window.scrollY) {
-                this.navbarTarget.style.position = 'relative';
+                // Reset initals attributs
+                this.navbarTarget.style.position = 'initial';
                 this.navbarTarget.style.top = '0'
-                console.log('down');
-            } else {
-                this.navbarTarget.style.position = 'fixed';
-                this.navbarTarget.style.top = document.querySelector('header').offsetHeight + 'px';
-                console.log('up');
+                main.style.marginTop = '0';
             }
+
+            // If scroll up
+            if (this.oldScrollY > window.scrollY) {
+                // Show only on window
+                this.navbarTarget.style.position = 'fixed';
+
+                // Show only on top + headerHeight
+                let header = document.querySelector('header');
+                this.navbarTarget.style.top = header.offsetHeight + 'px';
+
+                // Add navbarHeight on main because position fixed set initial navabar space to empty
+                main.style.marginTop = this.navbarTarget.offsetHeight + 'px';
+            }
+
             this.oldScrollY = window.scrollY;
         });
     }

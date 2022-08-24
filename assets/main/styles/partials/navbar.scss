@@ -6,5 +6,5 @@
 
 .main-navbar {
   transition-duration: 1s;
-  z-index: $zindex-navbar;
+  z-index: $zindex-navbar; // Under header
 }
