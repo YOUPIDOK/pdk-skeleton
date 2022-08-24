@@ -2,6 +2,7 @@
 
 namespace App\Controller\Dev;
 
+use App\Form\UiKitType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -17,6 +18,10 @@ class UikitController extends AbstractController
         $this->addFlash('warning', 'warning');
         $this->addFlash('danger', 'danger');
 
-        return $this->render('pages/uikit.html.twig');
+        $form = $this->createForm(UiKitType::class);
+
+        return $this->renderForm('pages/uikit.html.twig',[
+            'form' => $form
+        ]);
     }
 }

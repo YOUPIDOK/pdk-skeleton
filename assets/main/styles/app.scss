@@ -1,7 +1,11 @@
 @import "../fonts/_imports";
+
 @import "variables/_imports";
+
 @import "~bootstrap/scss/bootstrap";
 @import "~aos/src/sass/aos";
+@import "~choices.js/src/styles/choices";
+
 @import "components/_imports";
 @import "partials/_imports";
 @import "pages/_imports";
@@ -20,12 +24,12 @@ body {
 }
 
 /* ScrollBar part */
-//::-webkit-scrollbar {
-//  width: 14px;
-//}
-//::-webkit-scrollbar-track {
-//  background-color: #f7f8fa !important;
-//}
-//::-webkit-scrollbar-thumb {
-//  background: $primary;
-//}
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background-color: $secondary !important;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}

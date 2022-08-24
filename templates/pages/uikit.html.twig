@@ -177,6 +177,7 @@
             <hr>
         </div>
 
+        {{ form_start(form) }}
         <div class="row">
             <div class="col-md-5">
                 <div class="mb-3">
@@ -244,6 +245,8 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
+
+                {{ form_row(form.choiceJs) }}
                 <hr>
 
             </div>
@@ -281,6 +284,8 @@
                     </label>
                 </div>
             </div>
+            {{ form_end(form) }}
+
             <hr>
         </div>
     </div>

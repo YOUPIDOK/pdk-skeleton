@@ -22,6 +22,7 @@
 * Boostrap ``5.2``
 * Font awesome ``6.1``
 * AOS ``2.3``
+* ChoiceJs ``10.1``
 ### Install
 ```shell
 git flow init

@@ -10,18 +10,11 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Length;
 
-class TestType extends AbstractType
+class UiKitType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('text', TextType::class, [
-                'constraints' => [
-                    new Length([
-                        'min' => 10
-                    ])
-                ]
-            ])
             ->add('choiceJs', ChoicesType::class, [
                 'placeholder' => 'Placeholder',
                 'required' => true,
