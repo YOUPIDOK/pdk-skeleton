@@ -4,6 +4,7 @@ TODO :
     - Ckeditor in admin
     - Simple login with save me checkbox
     - User and group with roles
+        -> create user cmd add select groups same roel
     - Email reset password
         - main
         - admin

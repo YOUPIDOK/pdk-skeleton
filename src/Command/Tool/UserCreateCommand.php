@@ -66,10 +66,6 @@ class UserCreateCommand extends Command
             $addNewRole = $io->confirm('Other role ?');
         }
 
-        // Autre roles
-
-
-
         $this->em->persist($user);
         $this->em->flush();
 
