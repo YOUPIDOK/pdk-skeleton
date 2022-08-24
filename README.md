@@ -23,8 +23,10 @@
 * Font awesome ``6.1``
 * AOS ``2.3``
 * ChoiceJs ``10.1``
-### Install
+### Clone project
 ```shell
+git clone git@github.com:YOUPIDOK/symfony.git
+cd symfony
 git remote remove origin
 git remote add origin git@github.com:{ user }/{ project_name }.git
 git flow init
@@ -33,6 +35,7 @@ php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
 yarn install
 yarn build
+git push
 ```
 ### Command
 ```shell
