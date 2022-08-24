@@ -79,6 +79,14 @@
   accent-color: #337AB7;
 }
 
-.admin-homepage-link {
+.admin-login-homepage-link {
   color: black; font-size: 15px; text-decoration: none
+}
+
+.admin-login-error {
+  padding: 5px;
+  text-align: center;
+  color: #8B2E24;
+  background-color: #F7DBD8;
+  border: solid 1px #F6E0DF;
 }

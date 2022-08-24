@@ -14,10 +14,13 @@
         <div class="admin-login">
             <h2 class="admin-login-header">Administration</h2>
 
+            {% if error %}
+                <div class="admin-login-error">
+                    {{ error.messageKey|trans(error.messageData, 'security') }}
+                </div>
+            {% endif %}
+
             <form method="post" class="login-container">
-                {% if error %}
-                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                {% endif %}
 
                 <p>
                     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email"
@@ -46,7 +49,7 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="{{ path('homepage') }}" class="admin-homepage-link">Retour à la page d'accueil</a>
+                    <a href="{{ path('homepage') }}" class="admin-login-homepage-link">Retour à la page d'accueil</a>
                 </div>
             </form>
         </div>
