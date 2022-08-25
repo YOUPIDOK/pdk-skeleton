@@ -1,10 +1,8 @@
 TODO :
-    - Breadcrumb
-        - Uikit
     - Ckeditor in admin
     - Simple login with save me checkbox
     - User and group with roles
-        -> create user cmd add select groups same roel
+        -> create user cmd : add select group
     - Email reset password
         - main
         - admin
