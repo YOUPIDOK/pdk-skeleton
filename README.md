@@ -14,12 +14,14 @@
   * Liip Imagine ``2.8``
   * KnpMenu ``3.2``
   * PagerFanta ``3.7``
+  * FOSCKEditor ``2.4``
+
 * JS 
   * Webpack ``3.0``
-  * Hotwired Stimulus ``3.0``
-  * Hotwired Turbo ``7.1``
 
 #### Front-end
+* Hotwired Stimulus ``3.0``
+* Hotwired Turbo ``7.1``
 * Boostrap ``5.2``
 * Font awesome ``6.1``
 * AOS ``2.3``

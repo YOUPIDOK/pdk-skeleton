@@ -1,0 +1,7 @@
+fos_ck_editor:
+  configs:
+    default:
+      toolbar:
+        - [ Bold, Italic, Underline, -, Cut, Copy, PasteText, PasteFromWord, -, Undo, Redo ]
+        - [ Source ]
+      autoParagraph: false
