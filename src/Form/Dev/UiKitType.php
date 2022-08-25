@@ -10,7 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class UiKitType extends AbstractType
-{
+    {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -26,10 +26,10 @@ class UiKitType extends AbstractType
                     'itemSelectText' => 'Séléctionner cette option',
                 ]
             ])
-            ->add('ckeditor', CKEditorType::class, [
-                'config_name' => 'default',
-                'label' => false
-            ])
+//            ->add('ckeditor', CKEditorType::class, [
+//                'config_name' => 'default',
+//                'label' => false
+//            ])
         ;
     }
 

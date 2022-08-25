@@ -13,4 +13,4 @@ import 'bootstrap/dist/js/bootstrap.min';
 import './stimulus';
 
 // Start turbo
-import * as Turbo from "@hotwired/turbo";
+// import * as Turbo from "@hotwired/turbo";

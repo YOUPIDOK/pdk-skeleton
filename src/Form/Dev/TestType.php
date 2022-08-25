@@ -35,10 +35,6 @@ class TestType extends AbstractType
                     'itemSelectText' => 'Séléctionner cette option',
                 ]
             ])
-            ->add('ckeditor', CKEditorType::class, [
-                'config_name' => 'default',
-                'label' => false
-            ])
             ->add('submit', SubmitType::class)
         ;
     }
