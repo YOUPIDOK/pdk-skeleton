@@ -23,8 +23,8 @@ class TestType extends AbstractType
                 ]
             ])
             ->add('choiceJs', ChoicesType::class, [
+                'required' => false,
                 'placeholder' => 'Placeholder',
-                'required' => true,
                 'choices' => [
                     'option 1' => 1,
                     'option 2' => 2,
