@@ -6,20 +6,17 @@
 * Node ``16``
 ### Dependencies
 #### Back-end
-* PHP
-  * Symfony ``6.1``
-  * Sonata ``4.1``
-  * PrestaSitemap ``3.3``
-  * VichUploader ``1.1``
-  * Liip Imagine ``2.8``
-  * KnpMenu ``3.2``
-  * PagerFanta ``3.7``
-  * FOSCKEditor ``2.4``
-
-* JS 
-  * Webpack ``3.0``
+* Symfony ``6.1``
+* Sonata ``4.1``
+* PrestaSitemap ``3.3``
+* VichUploader ``1.1``
+* Liip Imagine ``2.8``
+* KnpMenu ``3.2``
+* PagerFanta ``3.7``
+* FOSCKEditor ``2.4``
 
 #### Front-end
+* Webpack ``3.0``
 * Hotwired Stimulus ``3.0``
 * Hotwired Turbo ``7.1``
 * Boostrap ``5.2``
