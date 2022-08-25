@@ -13,6 +13,7 @@
   * VichUploader ``1.1``
   * Liip Imagine ``2.8``
   * KnpMenu ``3.2``
+  * PagerFanta ``3.7``
 * JS 
   * Webpack ``3.0``
   * Hotwired Stimulus ``3.0``
