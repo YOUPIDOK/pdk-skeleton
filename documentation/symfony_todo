@@ -1,12 +1,14 @@
 TODO :
     - Ckeditor in admin
-    - Simple login with save me checkbox
+    - Simple login with save me checkbox login btn and logout btn
+    - Register user form tpl
     - User and group with roles
         -> create user cmd : add select group
     - Email reset password
         - main
         - admin
     - Read All Turbo docs and test it
+
 At the end
 TODO :
     - Bundle
