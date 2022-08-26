@@ -28,12 +28,13 @@ class BreadcrumbExtension extends AbstractExtension
     {
         /* $data struct */
         // [
-        //      // Use an array if you want to override default page name
+        //      // Use an array if you want to override default page name or set route parameters
         //      [
         //          'route',
+        //          {parameters...},
         //          'pageName'
         //      ],
-        //      // Use a string if you want to use default page name
+        //      // Use a string if you want to use default page name with any paramters
         //      'route'
         // ]
 

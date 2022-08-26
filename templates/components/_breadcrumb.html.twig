@@ -4,10 +4,13 @@
             {% for el in data %}
                 <li class="breadcrumb-item {{ loop.last	 ? 'active aria-current="page"' : '"' }}">
                     {% if loop.last %}
-                        {{  el is iterable ? el[1] : defaultPagesNames[el] }}
+                        {{  el is iterable and el[2] is defined ? el[2] : defaultPagesNames[el is iterable ? el[0] : el] }}
                     {% else %}
-                        <a href="{{ path(el is iterable ? el[0] : el) }}">
-                            {{  el is iterable ? el[1] : defaultPagesNames[el] }}
+                        <a href="{{ path(
+                            el is iterable ? el[0] : el,
+                            el is iterable and el[1] is defined ? el[1] : {}
+                        ) }}">
+                            {{  el is iterable and el[2] is defined ? el[2] : defaultPagesNames[el is iterable ? el[0] : el] }}
                         </a>
                     {% endif %}
                 </li>
