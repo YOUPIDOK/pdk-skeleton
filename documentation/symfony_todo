@@ -1,5 +1,4 @@
 TODO :
-    - Simple login with save me checkbox login btn and logout btn
     - User and group with roles
         -> create user cmd : add select group
     - Register user with policy conf

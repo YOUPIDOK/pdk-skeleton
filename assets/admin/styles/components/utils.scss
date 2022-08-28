@@ -1,0 +1,18 @@
+.d-flex {
+  display: flex;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.ml-1 {
+  margin-left: 5px;
+}
+
+// Add space at right on li el
+ul.d-flex {
+  li {
+    margin-right: 5px;
+  }
+}

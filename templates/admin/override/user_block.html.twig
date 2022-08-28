@@ -4,10 +4,9 @@
             <div>{{ app.user }}</div>
         </div>
 
-        <li class="user-footer">
-            <div class="text-center">
-                <a href="{{ path('admin_logout') }}" class="btn btn-default btn-flat"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
-            </div>
+        <li class="user-footer d-flex">
+            <a href="{{ path('homepage') }}" class="btn btn-default btn-flat w-50 text-center">Page d'accueil</a>
+            <a href="{{ path('admin_logout') }}" class="btn btn-default btn-flat w-50">Déconnexion</a>
         </li>
     {% endif %}
 {% endblock %}

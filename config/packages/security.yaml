@@ -19,7 +19,8 @@ security:
         admin:
             context: user
             pattern: /admin(.*)
-            custom_authenticator: App\Security\Admin\AdminAuthenticator
+            custom_authenticator:
+                - App\Security\Admin\AdminAuthenticator
             user_checker: App\Security\Admin\AdminChecker
             form_login:
                 provider: app_user_provider
@@ -32,11 +33,31 @@ security:
                 path: admin_logout
                 target: admin_login
             switch_user: { role: ROLE_IMPERSONATE }
-    #            lazy: true
             remember_me:
                 secret: '%kernel.secret%' # required
                 lifetime: 2419200 # 1 month in seconds
-#                always_remember_me: true
+                signature_properties: [ 'password', 'email' ]
+
+        main:
+            context: user
+            pattern: .*
+            custom_authenticator:
+                - App\Security\Main\MainAuthenticator
+            user_checker: App\Security\Main\MainChecker
+            form_login:
+                provider: app_user_provider
+                login_path: login
+                use_forward: false
+                check_path: login
+                failure_path: null
+            entry_point: form_login
+            logout:
+                path: logout
+                target: login
+            switch_user: { role: ROLE_IMPERSONATE }
+            remember_me:
+                secret: '%kernel.secret%' # required
+                lifetime: 2419200 # 1 month in seconds
                 signature_properties: [ 'password', 'email' ]
 
     access_control:
@@ -44,6 +65,9 @@ security:
         - { path: ^/admin/login$, role: PUBLIC_ACCESS }
         - { path: ^/admin/logout$, role: PUBLIC_ACCESS }
         - { path: ^/admin, roles: ROLE_ADMIN }
+
+        # Main config
+        - { path: ^/.*, role: PUBLIC_ACCESS }
 
 when@test:
     security:

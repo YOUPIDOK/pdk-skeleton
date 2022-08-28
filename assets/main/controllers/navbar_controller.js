@@ -1,5 +1,4 @@
 import { Controller } from '@hotwired/stimulus';
-import AOS from 'aos/dist/aos';
 
 export default class extends Controller {
     static targets = [ "navbar" ]
@@ -8,27 +7,16 @@ export default class extends Controller {
 
     connect() {
         window.addEventListener('scroll', () => {
-            let main = document.querySelector("main");
-
             // If scroll down
             if (this.oldScrollY < window.scrollY) {
-                // Reset initals attributs
-                this.navbarTarget.style.position = 'initial';
-                this.navbarTarget.style.top = '0'
-                main.style.marginTop = '0';
+                this.navbarTarget.classList.remove('top-0');
+                this.navbarTarget.classList.remove('position-sticky');
             }
 
             // If scroll up
             if (this.oldScrollY > window.scrollY) {
-                // Show only on window
-                this.navbarTarget.style.position = 'fixed';
-
-                // Show only on top + headerHeight
-                let header = document.querySelector('header');
-                this.navbarTarget.style.top = header.offsetHeight + 'px';
-
-                // Add navbarHeight on main because position fixed set initial navabar space to empty
-                main.style.marginTop = this.navbarTarget.offsetHeight + 'px';
+                this.navbarTarget.classList.add('position-sticky');
+                this.navbarTarget.classList.add('top-0');
             }
 
             this.oldScrollY = window.scrollY;

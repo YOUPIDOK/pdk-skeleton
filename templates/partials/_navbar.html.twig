@@ -1,12 +1,18 @@
 <nav class="main-navbar navbar navbar-expand-lg bg-light w-100" data-controller="navbar" data-navbar-target="navbar">
     <div class="container-fluid">
-        <i class="fa-solid fa-ellipsis-vertical btn text-black" data-bs-toggle="offcanvas"
-           data-bs-target="#sidebar" aria-controls="sidebar"></i>
         <a class="navbar-brand" href="{{ path('homepage') }}"><img src="{{ asset('app_icon/icon_100px.png') }}" width="40px"></a>
         <i class="fa-solid fa-bars btn navbar-toggler border-0 text-black" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"></i>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse d-xl-flex justify-content-between" id="navbarNavDropdown">
             {{ knp_menu_render('main') }}
+            <div class="d-flex justify-content-end ">
+                {% if app.user is not null %}
+                    <span class="btn btn-primary btn-sm text-white"><i class="fa-solid fa-user"></i> {{ app.user.identity }}</span>
+                    <a href="{{ path('logout') }}" class="btn btn-danger text-white btn-sm"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                {% else %}
+                    <a href="{{ path('login') }}" class="btn btn-primary btn-sm">Connexion</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </nav>

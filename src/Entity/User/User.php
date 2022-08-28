@@ -57,10 +57,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return ($this->firstname !== '' ? ($this->firstname . ' ') : '') . $this->lastname;
     }
 
-    public function getIdentity(): string
+    public function getIdentity(?bool $addPrefix = false): string
     {
-        $prefix = GenderEnum::getPrefix($this->gender);
-        $toString = $prefix != GenderEnum::$prefixs[GenderEnum::NON_BINARY] ? ($prefix . ' ') : '';
+        $toString = '';
+        if ($addPrefix) {
+            $prefix = GenderEnum::getPrefix($this->gender);
+            $toString = $prefix != GenderEnum::$prefixs[GenderEnum::NON_BINARY] ? ($prefix . ' ') : '';
+        }
         $toString .= $this->firstname !== null ? (ucfirst($this->firstname) . ' ') : '';
         $toString .= $this->lastname !== null ? ucfirst($this->lastname) : '';
 

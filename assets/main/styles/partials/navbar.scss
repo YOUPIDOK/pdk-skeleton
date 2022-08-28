@@ -8,3 +8,7 @@
   transition-duration: 1s;
   z-index: $zindex-navbar; // Under header
 }
+
+.nav-link {
+  text-align: center;
+}

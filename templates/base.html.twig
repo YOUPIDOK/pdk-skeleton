@@ -11,16 +11,16 @@
         <link rel="manifest" href="/manifest.webmanifest">
     </head>
     <body>
-        {% include "partials/_header.html.twig" %}
         {% include "partials/_navbar.html.twig" %}
-        {% include "partials/_sidebar.html.twig" %}
         <main>
-            {% include "partials/_flash_messages.html.twig" %}
+            {% block header %}{% endblock %}
 
+            {% include "partials/_flash_messages.html.twig" %}
             <div class="p-2">
                 {% block body %}{% endblock %}
             </div>
         </main>
         {% include "partials/_footer.html.twig" %}
+        {% block modals %}{% endblock %}
     </body>
 </html>
