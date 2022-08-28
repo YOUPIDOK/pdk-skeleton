@@ -2,8 +2,7 @@
 
 namespace App\Form\Dev;
 
-use App\Form\ChoicesType;
-use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use App\Form\CustomType\ChoicesType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
