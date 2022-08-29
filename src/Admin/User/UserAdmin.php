@@ -105,8 +105,8 @@ final class UserAdmin extends AbstractAdmin
             ->add('firstname')
             ->add('lastname')
             ->add('email')
-            ->add('groups')
             ->add('enabled')
+            ->add('groups')
             ->add('isAdmin', FieldDescriptionInterface::TYPE_BOOLEAN,[
                 'accessor' => function ($user) {
                     return $user->isAdmin();

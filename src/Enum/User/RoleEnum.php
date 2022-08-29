@@ -2,6 +2,10 @@
 
 namespace App\Enum\User;
 
+/**
+ * Use this enum for manage app access
+ * Register each role in security.yaml in the part role_hierarchy
+ */
 class RoleEnum
 {
     const DEFAULT_ROLE = 'ROLE_USER';
