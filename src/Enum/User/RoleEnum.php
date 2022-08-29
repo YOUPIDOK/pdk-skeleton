@@ -4,12 +4,14 @@ namespace App\Enum\User;
 
 class RoleEnum
 {
-    const ROLE_1 = 'ROLE_1';
-    const ROLE_2 = 'ROLE_2';
+    const DEFAULT_ROLE = 'ROLE_USER';
+
+    const ROLE_TEST_1 = 'ROLE_TEST_1';
+    const ROLE_TEST_2 = 'ROLE_TEST_2';
 
     public static array $roles = [
-        self::ROLE_1 => 'R1',
-        self::ROLE_2 => 'R2',
+        self::ROLE_TEST_1 => 'Accès test n°1',
+        self::ROLE_TEST_2 => 'Accès test n°2',
     ];
 
     public static function getRole($key): string

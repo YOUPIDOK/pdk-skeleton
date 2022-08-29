@@ -5,11 +5,12 @@ namespace App\Entity\User;
 use App\Repository\User\GroupRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 #[ORM\Entity(repositoryClass: GroupRepository::class)]
-#[UniqueEntity('label')]
+#[UniqueEntity('name')]
 #[ORM\Table(name: 'user__group')]
 class Group
 {
@@ -23,6 +24,9 @@ class Group
 
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'groups')]
     private Collection $users;
+
+    #[ORM\Column]
+    private array $roles = [];
 
     public function __construct()
     {
@@ -74,6 +78,18 @@ class Group
         if ($this->users->removeElement($user)) {
             $user->removeGroup($this);
         }
+
+        return $this;
+    }
+
+    public function getRoles(): array
+    {
+        return $this->roles;
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
 
         return $this;
     }

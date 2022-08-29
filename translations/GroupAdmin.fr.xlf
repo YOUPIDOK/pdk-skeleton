@@ -19,5 +19,11 @@
         <target>Nom</target>
       </segment>
     </unit>
+    <unit id="wlM3BVR" name="Roles">
+      <segment>
+        <source>Roles</source>
+        <target>Accès</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

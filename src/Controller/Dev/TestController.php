@@ -26,7 +26,7 @@ class TestController extends AbstractController
             $this->addFlash('danger', 'Error');
         }
 
-        return $this->renderForm('pages/test.html.twig', [
+        return $this->renderForm('dev/test.html.twig', [
             'form' => $form
         ]);
     }

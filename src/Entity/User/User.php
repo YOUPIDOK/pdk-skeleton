@@ -3,7 +3,8 @@
 namespace App\Entity\User;
 
 use App\Enum\User\GenderEnum;
-use App\Repository\UserRepository;
+use App\Enum\User\RoleEnum;
+use App\Repository\User\UserRepository;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -137,8 +138,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
+
+        foreach ($this->getGroups() as $group) {
+            $roles = array_merge($roles, $group->getRoles());
+        }
+
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $roles[] = RoleEnum::DEFAULT_ROLE;
 
         return array_unique($roles);
     }

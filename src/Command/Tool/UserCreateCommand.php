@@ -4,6 +4,7 @@ namespace App\Command\Tool;
 
 use App\Entity\User\User;
 use App\Enum\User\GenderEnum;
+use App\Repository\User\GroupRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -21,12 +22,17 @@ class UserCreateCommand extends Command
 {
     private EntityManagerInterface $em;
     private UserPasswordHasherInterface $userPasswordHasher;
+    private GroupRepository $groupRepository;
 
-    public function __construct(EntityManagerInterface $em, UserPasswordHasherInterface $userPasswordHasher)
-    {
+    public function __construct(
+        EntityManagerInterface $em,
+        UserPasswordHasherInterface $userPasswordHasher,
+        GroupRepository $groupRepository
+    ){
         parent::__construct('user:create');
         $this->em = $em;
         $this->userPasswordHasher = $userPasswordHasher;
+        $this->groupRepository = $groupRepository;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -59,11 +65,17 @@ class UserCreateCommand extends Command
             }
         }
 
-        $addNewRole = $io->confirm('Other role? ');
+        $addNewRole = $io->confirm('Other role ? ', false);
         while ($addNewRole) {
-            $role = $io->ask('Role ','');
-            $user->addRole($role);
-            $addNewRole = $io->confirm('Other role ?');
+            $user->addRole($io->ask('Role ',''));
+            $addNewRole = $io->confirm('Other role ?', false);
+        }
+
+        $addNewGroup = $io->confirm('Add group ? ', false);
+        while ($addNewGroup) {
+
+            $user->addGroup($io->choice('Group', $this->groupRepository->findAll()));
+            $addNewGroup = $io->confirm('Other group ?', false);
         }
 
         $this->em->persist($user);

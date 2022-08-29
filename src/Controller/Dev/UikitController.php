@@ -20,7 +20,7 @@ class UikitController extends AbstractController
 
         $form = $this->createForm(UiKitType::class);
 
-        return $this->renderForm('pages/uikit.html.twig',[
+        return $this->renderForm('dev/uikit.html.twig',[
             'form' => $form
         ]);
     }

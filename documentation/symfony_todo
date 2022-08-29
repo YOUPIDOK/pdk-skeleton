@@ -1,8 +1,6 @@
 TODO :
-    - User and group with roles
-        -> Create user cmd : add select group // Enum
+    - Politique, mention legal et cgu default,
     - Register user with policy conf
     - Valid email account main
-    - Politique, mention legal et cgu default,
     - Email reset password
         - Main / admin

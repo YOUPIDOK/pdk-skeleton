@@ -8,6 +8,8 @@ security:
                 property: email
 
     role_hierarchy:
+        ROLE_TEST_1: ROLE_USER
+        ROLE_TEST_2: ROLE_USER
         ROLE_ADMIN: ROLE_USER
         ROLE_SUPER_ADMIN: [ ROLE_ADMIN, ROLE_IMPERSONATE ]
 
