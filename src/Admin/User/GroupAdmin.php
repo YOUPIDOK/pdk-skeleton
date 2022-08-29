@@ -15,14 +15,14 @@ final class GroupAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
         $filter
-            ->add('label')
+            ->add('name')
             ;
     }
 
     protected function configureListFields(ListMapper $list): void
     {
         $list
-            ->add('label')
+            ->add('name')
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
                     'edit' => [],
@@ -34,7 +34,7 @@ final class GroupAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form): void
     {
         $form
-            ->add('label')
+            ->add('name')
             ;
     }
 }

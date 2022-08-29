@@ -7,5 +7,17 @@
         <target>Groupes</target>
       </segment>
     </unit>
+    <unit id="DmY3P0X" name="Label">
+      <segment>
+        <source>Label</source>
+        <target>Label</target>
+      </segment>
+    </unit>
+    <unit id="3NHVIj9" name="Name">
+      <segment>
+        <source>Name</source>
+        <target>Nom</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

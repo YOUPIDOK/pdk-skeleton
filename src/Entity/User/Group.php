@@ -19,7 +19,7 @@ class Group
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $label = null;
+    private ?string $name = null;
 
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'groups')]
     private Collection $users;
@@ -31,7 +31,7 @@ class Group
 
     public function __toString(): string
     {
-        return $this->label;
+        return $this->name;
     }
 
     public function getId(): ?int
@@ -39,14 +39,14 @@ class Group
         return $this->id;
     }
 
-    public function getLabel(): ?string
+    public function getName(): ?string
     {
-        return $this->label;
+        return $this->name;
     }
 
-    public function setLabel(string $label): self
+    public function setName(string $name): self
     {
-        $this->label = $label;
+        $this->name = $name;
 
         return $this;
     }
