@@ -20,11 +20,12 @@ sonata_admin:
                     color: bg-red
         groups:
             group:
-                on_top: true
+#                on_top: true
                 label: Utilisateurs
                 icon: '<i class="fa fa-users"></i>'
                 items:
                     - admin.user
+                    - admin.group
 
 #    assets:
 #        extra_javascripts:

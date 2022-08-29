@@ -13,16 +13,24 @@ services:
             - '../src/Kernel.php'
 
 #################################################### Admin Part ########################################################
-
+### USER / Group ###
     admin.user:
-        class: App\Admin\UserAdmin
+        class: App\Admin\User\UserAdmin
         tags:
-            - { name: sonata.admin, model_class: App\Entity\User\User, controller: ~, manager_type: orm, group: admin, label: User }
+            - { name: sonata.admin, model_class: App\Entity\User\User, controller: ~, manager_type: orm, group: admin, label: Users }
         calls:
             - [ setUserPasswordHasher, [ '@security.user_password_hasher' ] ]
             - [ setTranslationDomain, [ 'UserAdmin' ] ]
 
-########################################################################################################################
+    admin.group:
+        class: App\Admin\User\GroupAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\User\Group, controller: ~, manager_type: orm, group: admin, label: Groups }
+        calls:
+            - [ setTranslationDomain, [ 'GroupAdmin' ] ]
+
+
+    ########################################################################################################################
 #################################################### Menu Part #########################################################
 
     app.menu_builder:

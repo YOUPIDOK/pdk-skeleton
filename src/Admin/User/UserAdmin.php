@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Admin;
+namespace App\Admin\User;
 
 use App\Enum\User\GenderEnum;
 use DateTime;

@@ -103,5 +103,11 @@
         <target>Accès au site</target>
       </segment>
     </unit>
+    <unit id="awzJBNC" name="Users">
+      <segment>
+        <source>Users</source>
+        <target>Utilisateurs</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
