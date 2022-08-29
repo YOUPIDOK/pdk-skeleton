@@ -109,5 +109,11 @@
         <target>Utilisateurs</target>
       </segment>
     </unit>
+    <unit id="Obu3Gfo" name="Groups">
+      <segment>
+        <source>Groups</source>
+        <target>Groupes</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

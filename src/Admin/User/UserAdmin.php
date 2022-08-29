@@ -56,6 +56,7 @@ final class UserAdmin extends AbstractAdmin
             ->add('lastname')
             ->add('email')
             ->add('enabled')
+            ->add('groups')
             ->add('isAdmin', CallbackFilter::class, [
                 'callback' => static function(ProxyQueryInterface $query, string $alias, string $field, FilterData $data): bool {
                     if (!$data->hasValue()) {
@@ -104,6 +105,7 @@ final class UserAdmin extends AbstractAdmin
             ->add('firstname')
             ->add('lastname')
             ->add('email')
+            ->add('groups')
             ->add('enabled')
             ->add('isAdmin', FieldDescriptionInterface::TYPE_BOOLEAN,[
                 'accessor' => function ($user) {
@@ -162,6 +164,7 @@ final class UserAdmin extends AbstractAdmin
                 ->end()
                 ->with('access', ['class' => 'col-md-6'])
                     ->add('enabled')
+                    ->add('groups')
                 ->end()
             ->end()
         ;
@@ -172,9 +175,11 @@ final class UserAdmin extends AbstractAdmin
             FormEvents::SUBMIT,
             function (SubmitEvent $event) use($this_){
                 $user = $event->getData();
-                $this_->getRequest()->getSession()->getFlashBag(    )
-                    ->add('success', 'Le mot de passe à bien été reinitialiser.');
                 if ($user->getPlainPassword()) {
+                    if ($user->getId() !== null) {
+                        $this_->getRequest()->getSession()->getFlashBag()
+                            ->add('success', 'Le mot de passe à bien été reinitialiser.');
+                    }
                     $encoded = $this->userPasswordHasher->hashPassword($user, $user->getPlainPassword());
                     $user->setPassword($encoded);
                     $user->setUpdatePasswordAt(new DateTime('now'));
