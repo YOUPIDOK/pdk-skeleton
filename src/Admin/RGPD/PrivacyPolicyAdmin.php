@@ -62,15 +62,16 @@ final class PrivacyPolicyAdmin extends AbstractAdmin
 
     protected function configureFormFields(FormMapper $form): void
     {
+        $disabled = !$this->getSubject()->isDraft() && $this->getSubject()->getId() != null;
         $form
             ->with('version', ['class' => 'col-md-4'])
                 ->add('versionNumber', null, [
-                    'disabled' => !$this->getSubject()->isDraft()
+                    'disabled' => $disabled
                 ])
             ->end()
             ->with('date', ['class' => 'col-md-4'])
                 ->add('implementationDate', DateTimePickerType::class, [
-                    'disabled' => !$this->getSubject()->isDraft(),
+                    'disabled' => $disabled,
                     'constraints' => [
                         new GreaterThan(new DateTime('now'))
                     ]
@@ -78,13 +79,13 @@ final class PrivacyPolicyAdmin extends AbstractAdmin
             ->end()
             ->with('mod', ['class' => 'col-md-4'])
                 ->add('isDraft', null, [
-                    'disabled' => !$this->getSubject()->isDraft(),
+                    'disabled' => $disabled,
                     'help' => 'Une fois le mode brouillon désactivé la politique de confidentialité sera publiée et non éditable.'
                 ])
             ->end()
             ->end()
             ->add('body', CKEditorType::class, [
-                'disabled' => !$this->getSubject()->isDraft(),
+                'disabled' => $disabled,
                 'config_name' => 'default',
             ])
         ;

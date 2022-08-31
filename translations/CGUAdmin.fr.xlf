@@ -37,5 +37,17 @@
         <target>Créer</target>
       </segment>
     </unit>
+    <unit id="IeAitoB" name="CGU">
+      <segment>
+        <source>CGU</source>
+        <target>CGU</target>
+      </segment>
+    </unit>
+    <unit id="IxA_90l" name="Is Draft">
+      <segment>
+        <source>Is Draft</source>
+        <target>Brouillon ?</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

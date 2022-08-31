@@ -52,7 +52,7 @@
     <unit id="IxA_90l" name="Is Draft">
       <segment>
         <source>Is Draft</source>
-        <target>Brouillon</target>
+        <target>Brouillon ?</target>
       </segment>
     </unit>
     <unit id="j2_0639" name="Security">

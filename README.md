@@ -37,6 +37,9 @@ yarn install
 yarn build
 git push
 ```
+### Admin features
+- User manager with group and permissions
+- RGPD manager with cgu and privacy policy 
 ### Command
 ```shell
 php bin\console user:create # Create user

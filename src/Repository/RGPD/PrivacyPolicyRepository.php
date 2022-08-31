@@ -40,7 +40,6 @@ class PrivacyPolicyRepository extends ServiceEntityRepository
         }
     }
 
-
     public function findCurrentPrivacyPolicy()
     {
        return $this

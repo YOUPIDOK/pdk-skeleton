@@ -26,12 +26,16 @@ final class CGUAdmin extends AbstractAdmin
 
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
-        $filter->add('versionNumber');
+        $filter
+            ->add('versionNumber')
+            ->add('isDraft')
+        ;
     }
 
     protected function configureListFields(ListMapper $list): void
     {
         $list
+            ->add('isDraft')
             ->add('versionNumber')
             ->add('implementationDate', null, [
                 'format' => 'd/m/Y h:i:s'
@@ -39,6 +43,7 @@ final class CGUAdmin extends AbstractAdmin
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
                     'show' => [],
+                    'edit' => ['template' => 'admin/rgpd/cgu/list/edit_action.html.twig']
                 ],
             ])
         ;
@@ -47,25 +52,35 @@ final class CGUAdmin extends AbstractAdmin
     protected function configureRoutes(RouteCollectionInterface $collection): void
     {
         $collection->remove('delete');
-        $collection->remove('edit');
         $collection->remove('export');
     }
 
     protected function configureFormFields(FormMapper $form): void
     {
+        $disabled = !$this->getSubject()->isDraft() && $this->getSubject()->getId() != null;
         $form
-            ->with('version', ['class' => 'col-md-6'])
-            ->add('versionNumber')
+            ->with('version', ['class' => 'col-md-4'])
+            ->add('versionNumber', null, [
+                'disabled' => $disabled
+            ])
             ->end()
-            ->with('date', ['class' => 'col-md-6'])
+            ->with('date', ['class' => 'col-md-4'])
             ->add('implementationDate', DateTimePickerType::class, [
+                'disabled' => $disabled,
                 'constraints' => [
                     new GreaterThan(new DateTime('now'))
                 ]
             ])
             ->end()
+            ->with('mod', ['class' => 'col-md-4'])
+            ->add('isDraft', null, [
+                'disabled' => $disabled,
+                'help' => "Une fois le mode brouillon désactivé les conditions générales d'utilisation sera publiée et non éditable."
+            ])
+            ->end()
             ->end()
             ->add('body', CKEditorType::class, [
+//                'disabled' => $disabled,
                 'config_name' => 'default',
             ])
         ;
@@ -74,6 +89,7 @@ final class CGUAdmin extends AbstractAdmin
     protected function configureShowFields(ShowMapper $show): void
     {
         $show
+            ->add('isDraft')
             ->add('versionNumber')
             ->add('implementationDate', null, [
                 'format' => 'd/m/Y h:i:s'
