@@ -30,6 +30,9 @@ class PrivacyPolicy
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTime $implementationDate = null;
 
+    #[ORM\Column]
+    private ?bool $isDraft = true;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -72,6 +75,18 @@ class PrivacyPolicy
     public function setImplementationDate(\DateTime $implementationDate): self
     {
         $this->implementationDate = $implementationDate;
+
+        return $this;
+    }
+
+    public function isDraft(): ?bool
+    {
+        return $this->isDraft;
+    }
+
+    public function setIsDraft(bool $isDraft): self
+    {
+        $this->isDraft = $isDraft;
 
         return $this;
     }

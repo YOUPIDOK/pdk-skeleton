@@ -49,5 +49,29 @@
         <target>Créer</target>
       </segment>
     </unit>
+    <unit id="IxA_90l" name="Is Draft">
+      <segment>
+        <source>Is Draft</source>
+        <target>Brouillon</target>
+      </segment>
+    </unit>
+    <unit id="j2_0639" name="Security">
+      <segment>
+        <source>Security</source>
+        <target>Mode</target>
+      </segment>
+    </unit>
+    <unit id="L_g9Ey4" name="Mod">
+      <segment>
+        <source>Mod</source>
+        <target>Mode</target>
+      </segment>
+    </unit>
+    <unit id="PUQzcBC" name="Created At">
+      <segment>
+        <source>Created At</source>
+        <target>Date de publication</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

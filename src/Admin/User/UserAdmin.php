@@ -119,10 +119,10 @@ final class UserAdmin extends AbstractAdmin
             ])
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
-                    'edit' => ['template' => 'admin/user/list/edit_action.html.twig'],
-                    'delete' => ['template' => 'admin/user/list/delete_action.html.twig'],
-                    'edit_is_admin' => ['template' => 'admin/user/list/edit_is_admin_action.html.twig'],
-                    'impersonate' => ['template' => 'admin/user/list/impersonate_action.html.twig'],
+                    'edit' => ['template' => 'admin/user/user/list/edit_action.html.twig'],
+                    'delete' => ['template' => 'admin/user/user/list/delete_action.html.twig'],
+                    'edit_is_admin' => ['template' => 'admin/user/user/list/edit_is_admin_action.html.twig'],
+                    'impersonate' => ['template' => 'admin/user/user/list/impersonate_action.html.twig'],
                 ],
             ]);
     }

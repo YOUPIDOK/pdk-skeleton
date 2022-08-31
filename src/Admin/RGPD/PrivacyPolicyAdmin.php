@@ -31,12 +31,16 @@ final class PrivacyPolicyAdmin extends AbstractAdmin
 
     protected function configureDatagridFilters(DatagridMapper $filter): void
     {
-        $filter->add('versionNumber');
+        $filter
+            ->add('versionNumber')
+            ->add('isDraft')
+        ;
     }
 
     protected function configureListFields(ListMapper $list): void
     {
         $list
+            ->add('isDraft')
             ->add('versionNumber')
             ->add('implementationDate', null, [
                 'format' => 'd/m/Y h:i:s'
@@ -44,6 +48,7 @@ final class PrivacyPolicyAdmin extends AbstractAdmin
             ->add(ListMapper::NAME_ACTIONS, null, [
                 'actions' => [
                     'show' => [],
+                    'edit' => ['template' => 'admin/rgpd/privacy_policy/list/edit_action.html.twig']
                 ],
             ])
         ;
@@ -52,25 +57,34 @@ final class PrivacyPolicyAdmin extends AbstractAdmin
     protected function configureRoutes(RouteCollectionInterface $collection): void
     {
         $collection->remove('delete');
-        $collection->remove('edit');
         $collection->remove('export');
     }
 
     protected function configureFormFields(FormMapper $form): void
     {
         $form
-            ->with('version', ['class' => 'col-md-6'])
-                ->add('versionNumber')
+            ->with('version', ['class' => 'col-md-4'])
+                ->add('versionNumber', null, [
+                    'disabled' => !$this->getSubject()->isDraft()
+                ])
             ->end()
-            ->with('date', ['class' => 'col-md-6'])
+            ->with('date', ['class' => 'col-md-4'])
                 ->add('implementationDate', DateTimePickerType::class, [
+                    'disabled' => !$this->getSubject()->isDraft(),
                     'constraints' => [
                         new GreaterThan(new DateTime('now'))
                     ]
                 ])
             ->end()
+            ->with('mod', ['class' => 'col-md-4'])
+                ->add('isDraft', null, [
+                    'disabled' => !$this->getSubject()->isDraft(),
+                    'help' => 'Une fois le mode brouillon désactivé la politique de confidentialité sera publiée et non éditable.'
+                ])
+            ->end()
             ->end()
             ->add('body', CKEditorType::class, [
+                'disabled' => !$this->getSubject()->isDraft(),
                 'config_name' => 'default',
             ])
         ;
@@ -79,8 +93,12 @@ final class PrivacyPolicyAdmin extends AbstractAdmin
     protected function configureShowFields(ShowMapper $show): void
     {
         $show
+            ->add('isDraft')
             ->add('versionNumber')
             ->add('implementationDate', null, [
+                'format' => 'd/m/Y h:i:s'
+            ])
+            ->add('createdAt', null, [
                 'format' => 'd/m/Y h:i:s'
             ])
             ->add('body', null, [

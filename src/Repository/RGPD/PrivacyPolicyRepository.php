@@ -46,11 +46,11 @@ class PrivacyPolicyRepository extends ServiceEntityRepository
        return $this
            ->createQueryBuilder('p')
            ->where('p.implementationDate <= :now')
+           ->andWhere('p.isDraft = FALSE')
            ->orderBy('p.implementationDate', 'DESC')
            ->setParameter('now', new DateTime('now'))
            ->setMaxResults(1)
            ->getQuery()
            ->getOneOrNullResult();
     }
-
 }
