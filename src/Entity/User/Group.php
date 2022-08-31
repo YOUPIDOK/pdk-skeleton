@@ -8,6 +8,8 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints\Count;
+use Symfony\Component\Validator\Constraints\NotNull;
 
 #[ORM\Entity(repositoryClass: GroupRepository::class)]
 #[UniqueEntity('name')]
@@ -20,13 +22,15 @@ class Group
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[NotNull]
     private ?string $name = null;
+
+    #[ORM\Column]
+    #[Count(min: 1, minMessage: 'Veuillez choisir au moins 1 accès')]
+    private array $roles = [];
 
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'groups')]
     private Collection $users;
-
-    #[ORM\Column]
-    private array $roles = [];
 
     public function __construct()
     {
@@ -35,7 +39,7 @@ class Group
 
     public function __toString(): string
     {
-        return $this->name;
+        return '' . $this->name;
     }
 
     public function getId(): ?int
@@ -48,7 +52,7 @@ class Group
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
 

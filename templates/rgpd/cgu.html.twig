@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conditions générales d'utilisation{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {{ cgu.body | raw }}
+    </div>
+{% endblock %}

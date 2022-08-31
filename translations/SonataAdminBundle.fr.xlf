@@ -7,5 +7,11 @@
         <target>Utilisateurs</target>
       </segment>
     </unit>
+    <unit id="ibBzXJC" name="RGPD">
+      <segment>
+        <source>RGPD</source>
+        <target>RGPD</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

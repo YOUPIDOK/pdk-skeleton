@@ -19,14 +19,19 @@ sonata_admin:
                     text: "Utilisateurs"
                     color: bg-red
         groups:
-            group:
+            user:
 #                on_top: true
                 label: Utilisateurs
                 icon: '<i class="fa fa-users"></i>'
                 items:
                     - admin.user
                     - admin.group
-
+            rgpd:
+                label: RGPD
+                icon: '<i class="fa fa-file-text-o"></i>'
+                items:
+                    - admin.privacy_policy
+                    - admin.cgu
 #    assets:
 #        extra_javascripts:
 #            - build/admin/admin.js

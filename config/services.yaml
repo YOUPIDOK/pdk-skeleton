@@ -20,17 +20,29 @@ services:
             - { name: sonata.admin, model_class: App\Entity\User\User, controller: ~, manager_type: orm, group: admin, label: Users }
         calls:
             - [ setUserPasswordHasher, [ '@security.user_password_hasher' ] ]
-            - [ setTranslationDomain, [ 'UserAdmin' ] ]
+            - [ setTranslationDomain, [ 'UserAdmin' ]]
 
     admin.group:
         class: App\Admin\User\GroupAdmin
         tags:
             - { name: sonata.admin, model_class: App\Entity\User\Group, controller: ~, manager_type: orm, group: admin, label: Groups }
         calls:
-            - [ setTranslationDomain, [ 'GroupAdmin' ] ]
+            - [ setTranslationDomain, [ 'GroupAdmin' ]]
 
-
-    ########################################################################################################################
+### RGPD ###
+    admin.privacy_policy:
+        class: App\Admin\RGPD\PrivacyPolicyAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\RGPD\PrivacyPolicy, controller: ~, manager_type: orm, group: admin, label: PrivacyPolicies }
+        calls:
+            - [ setTranslationDomain, [ 'PrivacyPolicyAdmin' ]]
+    admin.cgu:
+        class: App\Admin\RGPD\CGUAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\RGPD\CGU, controller: ~, manager_type: orm, group: admin, label: CGU }
+        calls:
+            - [ setTranslationDomain, [ 'CGUAdmin' ] ]
+########################################################################################################################
 #################################################### Menu Part #########################################################
 
     app.menu_builder:
@@ -38,6 +50,6 @@ services:
         arguments: ["@knp_menu.factory"]
         tags:
             - { name: knp_menu.menu_builder, method: createMainMenu, alias: main } # the previous menu
-            - { name: knp_menu.menu_builder, method: createSidebarMenu, alias: sidebar } # Named "sidebar" this time
+#            - { name: knp_menu.menu_builder, method: createSidebarMenu, alias: sidebar } # Named "sidebar" this time
 
 ########################################################################################################################

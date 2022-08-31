@@ -29,6 +29,7 @@ final class UserAdmin extends AbstractAdmin
 {
     private ?UserPasswordHasherInterface $userPasswordHasher = null;
 
+
     public function setUserPasswordHasher(?UserPasswordHasherInterface $userPasswordHasher): self
     {
         $this->userPasswordHasher = $userPasswordHasher;
@@ -38,7 +39,6 @@ final class UserAdmin extends AbstractAdmin
     protected function configureRoutes(RouteCollectionInterface $collection): void
     {
         $collection->remove('export');
-        parent::configureRoutes($collection);
     }
 
 

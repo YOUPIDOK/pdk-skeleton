@@ -1,6 +1,7 @@
 TODO :
     - Politique, mention legal et cgu default,
-    - Register user with policy conf
+    - Create dir in packages config
+
     - Valid email account main
     - Email reset password
         - Main / admin

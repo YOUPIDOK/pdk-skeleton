@@ -57,6 +57,7 @@ class MenuBuilder
         return $menu;
     }
 
+   # Uncomment config in services.yaml for activate sidebar     builder
 //    public function createSidebarMenu(array $options): ItemInterface
 //    {
 //        $menu = $this->factory->createItem('sidebar', [

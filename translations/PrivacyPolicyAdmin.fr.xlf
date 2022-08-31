@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="fr" trgLang="fr">
+  <file id="PrivacyPolicyAdmin.fr">
+    <unit id="VbnW1vS" name="Version Number">
+      <segment>
+        <source>Version Number</source>
+        <target>Numéro de version</target>
+      </segment>
+    </unit>
+    <unit id="SfurOTJ" name="Implementation Date">
+      <segment>
+        <source>Implementation Date</source>
+        <target>Date de mise en place</target>
+      </segment>
+    </unit>
+    <unit id="yJS0p4T" name="Privacy Policy List">
+      <segment>
+        <source>Privacy Policy List</source>
+        <target>Politiques de confidentialité</target>
+      </segment>
+    </unit>
+    <unit id="2OD8O9B" name="PrivacyPolicy">
+      <segment>
+        <source>PrivacyPolicy</source>
+        <target>Politique de confidentialité</target>
+      </segment>
+    </unit>
+    <unit id="FYnYo8d" name="PrivacyPolicies">
+      <segment>
+        <source>PrivacyPolicies</source>
+        <target>Politiques de confidentialité</target>
+      </segment>
+    </unit>
+    <unit id="bMqmQVt" name="Body">
+      <segment>
+        <source>Body</source>
+        <target>Contenu</target>
+      </segment>
+    </unit>
+    <unit id="08kHtew" name="Privacy Policies">
+      <segment>
+        <source>Privacy Policies</source>
+        <target>Politiques de confidentialité</target>
+      </segment>
+    </unit>
+    <unit id="laGwug." name="Privacy Policy Create">
+      <segment>
+        <source>Privacy Policy Create</source>
+        <target>Créer</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
