@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class MainSecurityController extends AbstractController
+class SecurityController extends AbstractController
 {
     #[Route(path: '/connexion', name: 'login', options: ['sitemap' => true])]
     public function login(AuthenticationUtils $authenticationUtils): Response

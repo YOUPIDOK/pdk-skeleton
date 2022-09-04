@@ -10,6 +10,13 @@ use Twig\TwigFunction;
 
 class BreadcrumbExtension extends AbstractExtension
 {
+    private const DEFAULT_PAGE_NAMES = [
+        'homepage' => 'Homepage',
+        'uikit' => 'Uikit',
+        'test' => 'Test',
+        // TODO : COMPLETE
+    ];
+
     private Environment $twig;
 
     public function __construct(Environment $twig)
@@ -38,16 +45,9 @@ class BreadcrumbExtension extends AbstractExtension
         //      'route'
         // ]
 
-        $defaultPagesNames = [
-            'homepage' => 'Homepage',
-            'uikit' => 'Uikit',
-            'test' => 'Test',
-            // TODO : COMPLETE
-        ];
-
         $breadcrumb = $this->twig->render('components/_breadcrumb.html.twig', [
             'data' => $data,
-            'defaultPagesNames' => $defaultPagesNames
+            'defaultPagesNames' => self::DEFAULT_PAGE_NAMES
         ]);
 
         return new Markup( $breadcrumb, 'UTF-8' );

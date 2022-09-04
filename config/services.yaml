@@ -1,4 +1,7 @@
-parameters:
+imports:
+    - { resource: './packages/doctrine/*.yaml' }
+    - { resource: './packages/sonata/*.yaml' }
+    - { resource: './packages/front/*.yaml' }
 
 services:
     _defaults:
@@ -12,37 +15,6 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-#################################################### Admin Part ########################################################
-### USER / Group ###
-    admin.user:
-        class: App\Admin\User\UserAdmin
-        tags:
-            - { name: sonata.admin, model_class: App\Entity\User\User, controller: ~, manager_type: orm, group: admin, label: Users }
-        calls:
-            - [ setUserPasswordHasher, [ '@security.user_password_hasher' ] ]
-            - [ setTranslationDomain, [ 'UserAdmin' ]]
-
-    admin.group:
-        class: App\Admin\User\GroupAdmin
-        tags:
-            - { name: sonata.admin, model_class: App\Entity\User\Group, controller: ~, manager_type: orm, group: admin, label: Groups }
-        calls:
-            - [ setTranslationDomain, [ 'GroupAdmin' ]]
-
-### RGPD ###
-    admin.privacy_policy:
-        class: App\Admin\RGPD\PrivacyPolicyAdmin
-        tags:
-            - { name: sonata.admin, model_class: App\Entity\RGPD\PrivacyPolicy, controller: ~, manager_type: orm, group: admin, label: PrivacyPolicies }
-        calls:
-            - [ setTranslationDomain, [ 'PrivacyPolicyAdmin' ]]
-    admin.cgu:
-        class: App\Admin\RGPD\CGUAdmin
-        tags:
-            - { name: sonata.admin, model_class: App\Entity\RGPD\CGU, controller: ~, manager_type: orm, group: admin, label: CGU }
-        calls:
-            - [ setTranslationDomain, [ 'CGUAdmin' ] ]
-########################################################################################################################
 #################################################### Menu Part #########################################################
 
     app.menu_builder:

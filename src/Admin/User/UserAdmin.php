@@ -38,7 +38,13 @@ final class UserAdmin extends AbstractAdmin
 
     protected function configureRoutes(RouteCollectionInterface $collection): void
     {
-        $collection->remove('export');
+        $collection
+            ->remove('export')
+            ->add('addAdminRole', $this->getRouterIdParameter().'/add-admin-role')
+            ->add('removeAdminRole', $this->getRouterIdParameter().'/remove-admin-role')
+            ->add('addSuperAdminRole', $this->getRouterIdParameter().'/add-super-admin-role')
+            ->add('removeSuperAdminRole', $this->getRouterIdParameter().'/remove-super-admin-role')
+        ;
     }
 
 

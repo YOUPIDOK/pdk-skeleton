@@ -1,7 +1,11 @@
 TODO :
-    - Politique, mention legal et cgu default,
-    - Create dir in packages config
-
-    - Valid email account main
-    - Email reset password
-        - Main / admin
+    - bundles
+        - User
+            - Todolist
+                - Valid email account main
+                - Email reset password
+                    - Main / admin
+        - RGPD
+            - CGV
+            - activate route in parameter
+        - CMS

@@ -19,7 +19,7 @@ class RGPDController extends AbstractController
 
         if ($currentPrivacyPolicy === null) throw new NotFoundHttpException();
 
-        return $this->render('rgpd/privacy_policy.html.twig', [
+        return $this->render('pages/rgpd/privacy_policy.html.twig', [
             'privacyPoliticy' => $currentPrivacyPolicy
         ]);
     }
@@ -31,7 +31,7 @@ class RGPDController extends AbstractController
 
         if ($currentCGU === null) throw new NotFoundHttpException();
 
-        return $this->render('rgpd/cgu.html.twig', [
+        return $this->render('pages/rgpd/cgu.html.twig', [
             'cgu' => $currentCGU
         ]);
     }

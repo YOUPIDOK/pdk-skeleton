@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class SecurityAdminController extends AbstractController
+class SecurityController extends AbstractController
 {
     #[Route(path: '/admin/login', name: 'admin_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
