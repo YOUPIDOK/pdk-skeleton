@@ -13,3 +13,5 @@ fos_ck_editor:
         - [ Link, Unlink, Table ]
         - [ Format, Maximize, Source ]
       autoParagraph: false
+#      enterMode: CKEDITOR.ENTER_BR
+

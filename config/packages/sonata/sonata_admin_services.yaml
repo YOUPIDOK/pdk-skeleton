@@ -15,18 +15,4 @@ services:
       - { name: sonata.admin, model_class: App\Entity\User\Group, controller: ~, manager_type: orm, group: admin, label: Groups }
     calls:
       - [ setTranslationDomain, [ 'GroupAdmin' ] ]
-
-### RGPD ###
-  admin.privacy_policy:
-    class: App\Admin\RGPD\PrivacyPolicyAdmin
-    tags:
-      - { name: sonata.admin, model_class: App\Entity\RGPD\PrivacyPolicy, controller: ~, manager_type: orm, group: admin, label: PrivacyPolicies }
-    calls:
-      - [ setTranslationDomain, [ 'PrivacyPolicyAdmin' ] ]
-  admin.cgu:
-    class: App\Admin\RGPD\CGUAdmin
-    tags:
-      - { name: sonata.admin, model_class: App\Entity\RGPD\CGU, controller: ~, manager_type: orm, group: admin, label: CGU }
-    calls:
-      - [ setTranslationDomain, [ 'CGUAdmin' ] ]
 ########################################################################################################################

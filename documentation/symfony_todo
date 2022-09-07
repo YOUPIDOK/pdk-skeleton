@@ -1,11 +1,20 @@
 TODO :
-    - bundles
+    - Bundles
         - User
             - Todolist
                 - Valid email account main
                 - Email reset password
                     - Main / admin
         - RGPD
+            - Move controller
             - CGV
-            - activate route in parameter
-    Rename this project to pdk-skeleton
+            - Activate route in parameter
+            - Define tpl in parameter
+
+        - CMS
+            - define homepage in configuration
+            - Default login admin
+            - Type and stimulus controllers
+
+    - At the end :
+        - Rename this project to pdk-skeleton

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c1167786c31cd88840ca4b171772a5d",
+    "content-hash": "a6c8cc7aee24ec3ea653bf266e18d3ed",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -2628,6 +2628,53 @@
                 "source": "https://github.com/Pagerfanta/core/tree/v3.6.2"
             },
             "time": "2022-07-21T23:10:57+00:00"
+        },
+        {
+            "name": "pdk/rgpd-bundle",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/YOUPIDOK/pdk-rgpd-bundle.git",
+                "reference": "42dc433eb7d44022180ba6841d89a425d19d5de7"
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "^2.7",
+                "doctrine/orm": "^2.12",
+                "ext-json": "*",
+                "ext-zip": "*",
+                "php": ">=8.1",
+                "sonata-project/admin-bundle": "^4.10.0",
+                "symfony/config": "6.1.*",
+                "symfony/console": "6.1.*",
+                "symfony/dependency-injection": "6.1.*",
+                "symfony/doctrine-bridge": "6.1.*",
+                "symfony/event-dispatcher": "6.1.*",
+                "symfony/expression-language": "6.1.*",
+                "symfony/form": "6.1.*",
+                "symfony/framework-bundle": "6.1.*",
+                "symfony/http-foundation": "6.1.*",
+                "symfony/http-kernel": "6.1.*",
+                "symfony/options-resolver": "6.1.*",
+                "symfony/property-access": "6.1.*",
+                "symfony/routing": "6.1.*",
+                "symfony/translation": "6.1.*",
+                "symfony/twig-bridge": "6.1.*",
+                "symfony/twig-bundle": "6.1.*",
+                "symfony/validator": "6.1.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": []
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pdk\\RgpdBundle\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "time": "2022-09-07T20:15:12+00:00"
         },
         {
             "name": "php-translation/common",

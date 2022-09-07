@@ -30,8 +30,8 @@ sonata_admin:
                 label: RGPD
                 icon: '<i class="fa fa-file-text-o"></i>'
                 items:
-                    - admin.privacy_policy
-                    - admin.cgu
+                    - pdk.rgpd.admin.privacy_policy
+                    - pdk.rgpd.admin.gcu
 #    assets:
 #        extra_javascripts:
 #            - build/admin/admin.js
