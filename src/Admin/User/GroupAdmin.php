@@ -46,6 +46,7 @@ final class GroupAdmin extends AbstractAdmin
             ->add('name')
             ->add('roles', ChoiceType::class, [
                 'multiple' => true,
+                'expanded' => true,
                 'choices' => RoleEnum::getChoices(),
             ])
         ;
