@@ -29,7 +29,6 @@ final class UserAdmin extends AbstractAdmin
 {
     private ?UserPasswordHasherInterface $userPasswordHasher = null;
 
-
     public function setUserPasswordHasher(?UserPasswordHasherInterface $userPasswordHasher): self
     {
         $this->userPasswordHasher = $userPasswordHasher;

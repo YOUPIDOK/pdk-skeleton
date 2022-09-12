@@ -1,5 +1,6 @@
 imports:
     - { resource: './packages/doctrine/*.yaml' }
+    - { resource: './packages/pdk/*.yaml' }
     - { resource: './packages/sonata/*.yaml' }
     - { resource: './packages/front/*.yaml' }
 

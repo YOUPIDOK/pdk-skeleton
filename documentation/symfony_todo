@@ -5,16 +5,20 @@ TODO :
                 - Valid email account main
                 - Email reset password
                     - Main / admin
+                - Refactor construct
+
         - RGPD
-            - Move controller
-            - CGV
-            - Activate route in parameter
-            - Define tpl in parameter
+            - Cmd generate default
+                - CGU
+                - CGV
+                - Privacy policiy
+                - Update Readme
 
         - CMS
-            - define homepage in configuration
             - Default login admin
             - Type and stimulus controllers
+            - Refactor construct
 
     - At the end :
-        - Rename this project to pdk-skeleton
+        - Recreate all project / bundle and tag to 1.0.0 and update Readme
+

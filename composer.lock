@@ -2631,17 +2631,18 @@
         },
         {
             "name": "pdk/rgpd-bundle",
-            "version": "1.0.7",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/YOUPIDOK/pdk-rgpd-bundle.git",
-                "reference": "42dc433eb7d44022180ba6841d89a425d19d5de7"
+                "reference": "bc04aaa42b523d2c555853d52856a41865533fef"
             },
             "require": {
                 "doctrine/doctrine-bundle": "^2.7",
                 "doctrine/orm": "^2.12",
                 "ext-json": "*",
                 "ext-zip": "*",
+                "gedmo/doctrine-extensions": "^3.8",
                 "php": ">=8.1",
                 "sonata-project/admin-bundle": "^4.10.0",
                 "symfony/config": "6.1.*",
@@ -2674,7 +2675,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2022-09-07T20:15:12+00:00"
+            "time": "2022-09-07T22:36:32+00:00"
         },
         {
             "name": "php-translation/common",

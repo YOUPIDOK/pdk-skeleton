@@ -73,5 +73,11 @@
         <target>Date de publication</target>
       </segment>
     </unit>
+    <unit id="i3SMhlA" name="Is Current">
+      <segment>
+        <source>Is Current</source>
+        <target>Dernière version active ?</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

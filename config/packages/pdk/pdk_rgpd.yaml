@@ -1,0 +1,5 @@
+pdk_rgpd:
+  privacy_policy:
+    activate: true
+  gcu:
+    activate: true
