@@ -29,17 +29,24 @@
 
 ### Clone project
 ```shell
-git clone git@github.com:YOUPIDOK/pdk-skeleton.git
-cd symfony
+git clone git@github.com:YOUPIDOK/pdk-skeleton.git project-name
+cd project-name 
 git remote remove origin
 git remote add origin git@github.com:{ user }/{ project_name }.git
 git flow init
 composer install
+# Create .env.local, config db and set environment to dev mod
 php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
 yarn install
 yarn build
-git push
+git branch -M main
+git add .
+git commit -m "Init project"
+git push -u origin main
+gco develop
+git merge main
+git push --set-upstream origin develop
 ```
 ### Config
 #### User rights
