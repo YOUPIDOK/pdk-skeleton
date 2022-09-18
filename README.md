@@ -29,7 +29,7 @@
 
 ### Clone project
 ```shell
-git clone git@github.com:YOUPIDOK/symfony.git
+git clone git@github.com:YOUPIDOK/pdk-skeleton.git
 cd symfony
 git remote remove origin
 git remote add origin git@github.com:{ user }/{ project_name }.git
