@@ -23,6 +23,10 @@
 * Font awesome ``6.1``
 * AOS ``2.3``
 * ChoiceJs ``10.1``
+
+#### Pdk Bundles
+* Rgpd ``1.0``
+
 ### Clone project
 ```shell
 git clone git@github.com:YOUPIDOK/symfony.git
@@ -37,14 +41,11 @@ yarn install
 yarn build
 git push
 ```
-### Admin features
-- User manager with group and permissions
-- RGPD manager with cgu and privacy policy 
 ### Command
 ```shell
 php bin\console user:create # Create user
 ```
 ### Cron
 ```
-0 3 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap # Everyday at 03:00
+0 3 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap - Everyday at 03:00
 ```
