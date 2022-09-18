@@ -1,4 +1,4 @@
-# Symfony
+# PdkSkeleton
 > This project is Symfony Web app skeleton
 ## Documentation
 ### Requirement
@@ -41,6 +41,31 @@ yarn install
 yarn build
 git push
 ```
+### Config
+#### User rights
+```php
+// src/Enum/User/RoleEnum.php
+// Add new constant for manage roles available in admin group configuration
+// 
+
+// ...
+
+class RoleEnum
+{
+    const DEFAULT_ROLE = 'ROLE_USER';
+
+    const ROLE_TEST_1 = 'ROLE_TEST_1';
+    const ROLE_TEST_2 = 'ROLE_TEST_2';
+
+    public static array $roles = [
+        self::ROLE_TEST_1 => 'Accès test n°1',
+        self::ROLE_TEST_2 => 'Accès test n°2',
+    ];
+    
+    // ...
+}
+```
+###
 ### Command
 ```shell
 php bin\console user:create # Create user
