@@ -75,7 +75,7 @@ class RoleEnum
 ###
 ### Command
 ```shell
-php bin\console user:create # Create user
+php bin/console user:create # Create user
 ```
 ### Cron
 ```
