@@ -1,8 +1,10 @@
 .login {
-  position: absolute; /* or absolute */
-  top: 40%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  position: absolute;
+  //top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   width: 400px;
 }
 
