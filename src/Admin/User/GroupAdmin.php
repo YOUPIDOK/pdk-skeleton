@@ -23,7 +23,6 @@ final class GroupAdmin extends AbstractAdmin
     {
         $filter
             ->add('name')
-            ->add('roles')
         ;
     }
 

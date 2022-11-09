@@ -64,12 +64,12 @@ security:
 
     access_control:
         # Admin config
-        - { path: ^/admin/login$, role: PUBLIC_ACCESS }
-        - { path: ^/admin/logout$, role: PUBLIC_ACCESS }
-        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin/login$, role: PUBLIC_ACCESS, requires_channel: https }
+        - { path: ^/admin/logout$, role: PUBLIC_ACCESS, requires_channel: https }
+        - { path: ^/admin, roles: ROLE_ADMIN, requires_channel: https }
 
         # Main config
-        - { path: ^/.*, role: PUBLIC_ACCESS }
+        - { path: ^/.*, role: PUBLIC_ACCESS, requires_channel: https }
 
 when@test:
     security:
