@@ -14,3 +14,7 @@ import './stimulus';
 
 // Start turbo
 import * as Turbo from "@hotwired/turbo";
+
+if (navigator && navigator.serviceWorker) {
+    navigator.serviceWorker.register('sw.js');
+}
