@@ -11,9 +11,7 @@ use Twig\TwigFunction;
 class BreadcrumbExtension extends AbstractExtension
 {
     private const DEFAULT_PAGE_NAMES = [
-        'homepage' => 'Homepage',
-        'uikit' => 'Uikit',
-        'test' => 'Test',
+        'dashboard' => 'Tableau de bord',
         // TODO : COMPLETE
     ];
 

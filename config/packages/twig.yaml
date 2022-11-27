@@ -2,9 +2,9 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     form_themes:
         - 'bootstrap_5_layout.html.twig'
+        # Admin
         - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
         - '@SonataForm/Form/datepicker.html.twig'
-
 when@test:
     twig:
         strict_variables: true

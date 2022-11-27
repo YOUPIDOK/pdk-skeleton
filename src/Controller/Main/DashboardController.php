@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomepageController extends AbstractController
+class DashboardController extends AbstractController
 {
-    #[Route('/', name: 'homepage', options: ['sitemap' => true])]
+    #[Route('/', name: 'dashboard', options: ['sitemap' => true])]
     public function index(): Response
     {
-        return $this->render('pages/homepage.html.twig');
+        return $this->render('pages/dashboard.html.twig');
     }
 }

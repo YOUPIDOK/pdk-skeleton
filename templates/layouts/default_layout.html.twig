@@ -1,0 +1,14 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block body %}
+    <div class="container pt-2 ">
+        {% block breadcrumb %}{% endblock %}
+
+        {% set breadcrumb_block = block('breadcrumb') %}
+        {% if breadcrumb_block is not empty %}
+            <hr class="mt-1">
+        {% endif %}
+
+        {% block main %}{% endblock %}
+    </div>
+{% endblock %}

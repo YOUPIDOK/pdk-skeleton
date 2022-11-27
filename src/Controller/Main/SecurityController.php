@@ -15,7 +15,7 @@ class SecurityController extends AbstractController
          if ($this->getUser()) {
              $this->addFlash('warning', 'Vous êtes déja connecté.');
 
-             return $this->redirectToRoute('homepage');
+             return $this->redirectToRoute('dashboard');
          }
 
         $error = $authenticationUtils->getLastAuthenticationError();
