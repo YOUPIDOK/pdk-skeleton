@@ -1,2 +1,0 @@
-pdk_rgpd:
-  resource: "@PdkRgpdBundle/config/routes.yaml"

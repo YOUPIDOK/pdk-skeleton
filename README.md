@@ -1,5 +1,6 @@
-# PdkSkeleton
-> This project is Symfony Web app skeleton
+
+# toupiktv
+> TOUPIK-TV youtube manager
 ## Documentation
 ### Requirement
 * PHP ``8.1``
@@ -14,6 +15,7 @@
 * KnpMenu ``3.2``
 * PagerFanta ``3.7``
 * FOSCKEditor ``2.4``
+* Axios ``1.1``
 
 #### Front-end
 * Webpack ``3.0``
@@ -21,63 +23,18 @@
 * Hotwired Turbo ``7.1``
 * Boostrap ``5.2``
 * Font awesome ``6.1``
-* AOS ``2.3``
 * ChoiceJs ``10.1``
 
-#### Pdk Bundles
-* Rgpd ``1.0``
-
-### Clone project
+### Install
 ```shell
-git clone git@github.com:YOUPIDOK/pdk-skeleton.git project-name
-cd project-name 
-git remote remove origin
-git remote add origin git@github.com:{ user }/{ project_name }.git
-git flow init
 composer install
-# Create .env.local, config db and set environment to dev mod
 php bin/console doctrine:database:create
 php bin/console doctrine:schema:update --force
 yarn install
 yarn build
-git branch -M main
-git add .
-git commit -m "Init project"
-git push -u origin main
-gco develop
-git merge main
-git push --set-upstream origin develop
 ```
-### Config
-#### User rights
-```php
-// src/Enum/User/RoleEnum.php
-// Add new constant for manage roles available in admin group configuration
-// 
-
-// ...
-
-class RoleEnum
-{
-    const DEFAULT_ROLE = 'ROLE_USER';
-
-    const ROLE_TEST_1 = 'ROLE_TEST_1';
-    const ROLE_TEST_2 = 'ROLE_TEST_2';
-
-    public static array $roles = [
-        self::ROLE_TEST_1 => 'Accès test n°1',
-        self::ROLE_TEST_2 => 'Accès test n°2',
-    ];
-    
-    // ...
-}
-```
-###
-### Command
+### Commands
+#### Tool
 ```shell
 php bin/console user:create # Create user
-```
-### Cron
-```
-0 3 * * * php bin/console presta:sitemaps:dump  # PrestaSitemap - Everyday at 03:00
 ```

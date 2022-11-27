@@ -26,13 +26,6 @@ sonata_admin:
                 items:
                     - admin.user
                     - admin.group
-            rgpd:
-                label: RGPD
-                icon: '<i class="fa fa-file-text-o"></i>'
-                items:
-                    - pdk.rgpd.admin.privacy_policy
-                    - pdk.rgpd.admin.gcu
-                    - pdk.rgpd.admin.gcs
 #    assets:
 #        extra_javascripts:
 #            - build/admin/admin.js

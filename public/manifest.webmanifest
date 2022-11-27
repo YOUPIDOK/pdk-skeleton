@@ -1,11 +1,11 @@
 {
   "id": "/",
-  "name": "App name",
-  "short_name": "Short app name",
-  "start_url": "https://app.domain.fr",
+  "name": "TOUPIK-TV",
+  "short_name": "TOUPIK-TV",
+  "start_url": "https://toupik-tv.pidok-server.fr",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "App description",
+  "description": "TOUPIK-TV youtube manager",
   "icons": [
     {
       "src": "app_icon/icon_200px.png",

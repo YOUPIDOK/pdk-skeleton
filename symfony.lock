@@ -78,9 +78,6 @@
             "config/routes/liip_imagine.yaml"
         ]
     },
-    "pdk/rgpd-bundle": {
-        "version": "1.0.2"
-    },
     "php-translation/symfony-bundle": {
         "version": "0.12",
         "recipe": {
@@ -109,9 +106,6 @@
             "phpunit.xml.dist",
             "tests/bootstrap.php"
         ]
-    },
-    "presta/sitemap-bundle": {
-        "version": "v3.3.0"
     },
     "sensio/framework-extra-bundle": {
         "version": "6.2",
